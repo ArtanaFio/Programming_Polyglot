@@ -1,0 +1,135 @@
+/* The Programming Polyglot Homepage Style Sheet */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 25pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom, teal, cyan);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100vh;
+}
+
+#top-bar {
+    background-color: teal;
+    width: 100%;
+    height: 10vmax;
+    box-shadow: 0 3vmin 10px rgb(0, 88, 88);
+    color: rgb(0, 41, 41);
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 2vmax;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.logo {
+    font-size: 4vmax;
+    background-color:rgba(102, 248, 248, 0.39);
+    width: 5vmax;
+    height: 5vmax;
+    display: block;
+    border: 0.5vmin solid;
+    border-right-color: black;
+    border-bottom-color: black;
+    border-left-color: rgb(195, 240, 240);
+    border-top-color: rgb(195, 240, 240);
+    color:rgb(0, 41, 41);
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgb(195, 240, 240);
+    box-shadow: inset 1vmin 1vmin 10px rgb(0, 41, 41), inset -1vmin -1vmin 10px rgb(0, 41, 41);
+}
+
+.logo:hover {
+    border-right-color: rgb(195, 240, 240);
+    border-bottom-color: rgb(1, 102, 102);
+    border-left-color: rgb(1, 102, 102);
+    border-top-color: rgb(195, 240, 240);
+    color:rgb(195, 240, 240);
+    box-shadow: inset 0.3vmin 0.3vmin 10px rgb(195, 240, 240), inset -0.3vmin -0.3vmin 10px rgb(195, 240, 240);
+    text-shadow: none;
+}
+
+.title-name {
+    font-size: 1.5vmax;
+    padding: 0;
+    margin: 0;
+    color:rgb(195, 240, 240);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4vmax;
+}
+
+.content {
+    margin: 0 2vmax;
+}
+
+h2 {
+    color: white;
+    font-size: 3vmax;
+    text-align: center;
+}
+
+#languages {
+    display: flex;
+    flex-direction: row;
+    gap: 10vmin;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+button {
+    padding: 3vmin;
+    font-size: 1rem;
+    border-radius: 10px;
+    background-color: rgb(162, 238, 238);
+}
+
+button:hover {
+    background-color: teal;
+    color: white;
+}
+
+#copyright {
+    background-color: teal;
+    color: white;
+    font-style: italic;
+    font-size: 3vmin;
+    width: 100%;
+    text-align: center;
+    padding: 1vmin;
+}
+
+@media (max-width: 700px) {
+    #top-bar {
+        height: 5rem;
+    }
+
+    h1 {
+        text-align: right;
+    }
+}

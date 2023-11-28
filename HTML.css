@@ -1,0 +1,157 @@
+/* HTML Documents Style Sheet */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 25pt;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-image: linear-gradient(to bottom, teal, cyan);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    color:rgb(0, 88, 88);
+}
+
+#top-bar {
+    background-color: teal;
+    width: 100%;
+    height: 10vmax;
+    box-shadow: 0 3vmin 10px rgb(0, 88, 88);
+    color: rgb(0, 41, 41);
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding-right: 10vmax;
+}
+
+.logo-container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 5px;
+}
+
+.logo {
+    font-size: 4vmax;
+    background-color:rgba(102, 248, 248, 0.39);
+    width: 5vmax;
+    height: 5vmax;
+    display: block;
+    border: 0.5vmin solid;
+    border-right-color: black;
+    border-bottom-color: black;
+    border-left-color: rgb(195, 240, 240);
+    border-top-color: rgb(195, 240, 240);
+    margin-left: 2vmax;
+    color:rgb(0, 41, 41);
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 3px 3px 10px rgb(195, 240, 240);
+    box-shadow: inset 1vmin 1vmin 10px rgb(0, 41, 41), inset -1vmin -1vmin 10px rgb(0, 41, 41);
+}
+
+.logo:hover {
+    border-right-color: rgb(195, 240, 240);
+    border-bottom-color: rgb(1, 102, 102);
+    border-left-color: rgb(1, 102, 102);
+    border-top-color: rgb(195, 240, 240);
+    color:rgb(195, 240, 240);
+    box-shadow: inset 0.3vmin 0.3vmin 10px rgb(195, 240, 240), inset -0.3vmin -0.3vmin 10px rgb(195, 240, 240);
+    text-shadow: none;
+}
+
+.title-name {
+    font-size: 1.5vmax;
+    padding: 0;
+    margin: 0;
+    color:rgb(195, 240, 240);
+}
+
+h1 {
+    margin: 0;
+    padding: 0;
+    font-size: 4vmax;
+}
+
+article {
+    flex: 1;
+    padding: 3vmax;
+}
+
+li {
+    margin-bottom: 1vmax;
+}
+
+details {
+    margin: 2vmax 0;
+}
+summary {
+    color: white;
+    padding: 1vmin;
+}
+
+summary:hover {
+    text-decoration: 0.5vmin dotted underline;
+    background-color: rgba(102, 248, 248, 0.39);
+    border-radius: 10px;
+    box-shadow: inset 1vmin 1vmin 2vmin teal, inset -1vmin -1vmin 2vmin teal, inset 1vmin -1vmin 2vmin teal, inset -1vmin 1vmin 2vmin teal;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+.color,
+.link {
+    color: cyan;
+}
+
+.link:hover {
+    color: white;
+    text-decoration: dotted underline;
+}
+
+strong {
+    text-decoration: underline;
+}
+
+button {
+    width: fit-content;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin: 4vmax;
+    background-color:rgb(129, 248, 248);
+    color: rgb(0, 41, 41);
+    border-radius: 20px;
+    border-width: 5px;
+    border-style: solid;
+    border-left-color:rgb(0, 41, 41);
+    border-top-color:rgb(0, 41, 41);
+    border-right-color:rgb(0, 88, 88);
+    border-bottom-color:rgb(0, 88, 88);
+}
+
+button:hover {
+    background-color: teal;
+    color:white;
+    font-style: normal;
+}
+
+#copyright {
+    background-color: teal;
+    color: white;
+    font-style: italic;
+    font-size: 3vmin;
+    width: 100%;
+    text-align: center;
+    padding: 1vmin;
+}
