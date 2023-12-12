@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Background Property</title>
+        <link rel="stylesheet" href="HTML.css">
+        <script src="Polyglot.js" defer></script>
+    </head>
+    <body>
+        <div id="top-bar">
+            <div class="logo-container">
+                <a class="logo" href="index.html">P</a>
+                <p class="title-name"></p>
+            </div>
+            <h1>CSS Background Property</h1>
+        </div>
+        <article>
+            <details>
+                <summary>What is the CSS Background Property?</summary>
+                    <p>The background property falls under the awesome category of <span class="highlight">shorthand properties</span>.</p>
+                    <p>The background property can specify up to<span class="highlight">eight background-related CSS properties</span> at once:</p>
+                    <ul>
+                        <li>background-attachement</li>
+                        <li>background-clip</li>
+                        <li>background-color</li>
+                        <li>background-image</li>
+                        <li>background-origin</li>
+                        <li>background-position</li>
+                        <li>background-repeat</li>
+                        <li>background-size</li>
+                    </ul>
+                    <p>When entering values for the background CSS property, the order does not matter, but one recommended 
+                        order is:
+                    </p>
+                    <p>[<span class="color">image</span>], 
+                        [<span class="color">position</span> / <span class="color">size</span>], 
+                        [<span class="color">repeat</span>], [<span class="color">attachment</span>], 
+                        [<span class="color">origin</span>], [<span class="color">clip</span>], 
+                        [<span class="color">color</span>]
+                    </p>
+                    <p>Regardless of the exact order, the size value always comes right after the position value 
+                        and must be separated with "/".
+                    </p>
+                    <p>Also note that not all properties need to be specified to use the shorthand property; any property 
+                        that isn't specified will be set to its default setting.
+                    </p>
+            </details>
+            <details>
+                <summary>What are the background default settings?</summary>
+                <table>
+                    <head>
+                        <tr>
+                            <th>Background Property</th>
+                            <th>Default Value</th>
+                        </tr>
+                    </head>
+                    <tbody>
+                        <tr>
+                            <td>background-image</td>
+                            <td>none</td>
+                        </tr>
+                        <tr>
+                            <td>background-position</td>
+                            <td>0% 0%</td>
+                        </tr>
+                        <tr>
+                            <td>background-size</td>
+                            <td>auto</td>
+                        </tr>
+                        <tr>
+                            <td>background-repeat</td>
+                            <td>repeat</td>
+                        </tr>
+                        <tr>
+                            <td>background-attachment</td>
+                            <td>scroll</td>
+                        </tr>
+                        <tr>
+                            <td>background-origin</td>
+                            <td>padding-box</td>
+                        </tr>
+                        <tr>
+                            <td>background-clip</td>
+                            <td>border-box</td>
+                        </tr>
+                        <tr>
+                            <td>background-color</td>
+                            <td>transparent</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <p>In other words, specifiying:</p>
+                <ul>
+                    <li>"<span class="color">background: none</span>",</li>
+                    <li>"<span class="color">background: transparent</span>", and</li>
+                    <li>"<span class="color">background: repeat scroll 0% 0% / auto padding-box border-box none transparent</span>"</li>
+                </ul>
+                <p>all do the same thing and all are just the default setting.</p>
+            </details>
+            <details>
+                <summary>The background is made of layers?</summary>
+                <p>One of the coolest things about <span class="highlight">all background-related CSS properties</span> is 
+                    that they can <span class="highlight">specify multiple background layers</span>. Each background-related 
+                    property essentially represents a layer, but can be more than just one layer. These layers lay ontop of 
+                    each other to determine how the background ultimately displays on screen.
+                </p>
+                <p>When a background-related CSS property is made up of multiple layers, each layer is represented by a 
+                    value that is separated from the other values by a comma. The first value in this list is the top layer. 
+                    Regardless of how many layers there are, if color is specified, it will always be the last layer of the 
+                    background.
+                </p>
+            </details>
+            <details>
+                <summary>Can the background be an image?</summary>
+                <p><span class="color">Background-image</span> in particular can <span class="highlight">use more than one 
+                    image</span>.
+                </p>
+                <p>In fact, a "background image" doesn't have to be a picture (i.e. png, jpeg, svg files) at all; a background 
+                    image can be a gradient (More on that later).
+                </p>
+                <p>When using actual pictures as background images, the file name of the picture has to be encapsulated within 
+                    an url(). Without the url(), the computer won't know where to find the image. 
+                </p>
+                <p>This method requires an HTTP request, which might make the web page load slower. If that's an issue, a 
+                    data URI can be used instead because it saves HTTP Requests. The data URI replaces the image file, so you 
+                    still need to remember to encapsulate the data URI within the url(). You can use online conversion tools 
+                    to get a data URI for your pictures.
+                </p>
+                <p>Multiple background images are separated by commas. If using actual pictures, each picture has its own url(), 
+                    and each url() is separated by commas.
+                </p>
+                <p>If using gradients, the type of gradient must be specified.</p>
+                <ul>
+                    <li>conic-gradient()</li>
+                    <li>linear-gradient()</li>
+                    <li>radial-gradient()</li>
+                    <li>repeating-conic-gradient()</li>
+                    <li>repeating-linear-gradient()</li>
+                    <li>repeating-radial-gradient()</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Can the background position change?</summary>
+                <p><span class="highlight">Background-position</span> dictates where the background images are displayed 
+                    on screen.
+                </p>
+                <p>Often it is expressed as a percentage; the size of the background positioning area minus the size of 
+                    the background image. The s
+                </p>
+            </details>
+            <details>
+                <summary>Can the background change size?</summary>
+                <p><span class="highlight">Background-size</span> controls the background images' sizes.</p>
+            </details>
+            <details>
+                <summary>Can you repeat an image or pattern to use as a background?</summary>
+                <p><span class="highlight">Background-repeat</span> specifies how to repeat background images.</p>
+                <p>By default, the background image is repeated from left to right, top to bottom.</p>
+            </details>
+            <details>
+                <summary>Can the background "move"?</summary>
+                <p><span class="highlight">Background-attachment</span> is similar to background-position, except instead 
+                    of determining the background's image's exact location, it determines whether the image is fixed to 
+                    where it's positioned, or if it scrolls along with the rest of the page when the user reads down the 
+                    web page.
+                </p>
+            </details>
+            <details>
+                <summary>What is a positioning area?</summary>
+                <p><span class="highlight">Background-origin</span> is another property related to position. It decides the 
+                positioning area of the background image(s).
+            </p>
+            </details>
+            <details>
+                <summary>What is a painting area?</summary>
+                <p><span class="highlight">Background-clip</span> specifies the painting area of the background image.</p>
+            </details>
+            <details>
+                <summary>Does the background have to be white?</summary>
+                <p><span class="highlight">Background-color</span> literally colors the background.</p>
+            </details>
+        </article>
+        <button type="button" onclick="window.location.href='HTML_list.html';">Return to HTML Lessons</button>
+        <section id="copyright">Copyright &#169 2023</section>
+    </body>
+</html>
