@@ -1,5 +1,8 @@
 /* The Programming Polyglot Homepage Style Sheet */
 
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Merienda&display=swap');
+
 * {
     box-sizing: border-box;
 }
@@ -13,7 +16,7 @@ body {
     margin: 0;
     background-image: linear-gradient(to bottom, teal, rgb(0, 221, 221));
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size:150vw 150vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -128,6 +131,32 @@ button:hover {
     font-style: italic;
     font-size: 0.5rem;
     text-align: center;
+}
+
+.script {
+    font-family: 'Dancing Script';
+    text-align: left;
+    font-weight: lighter;
+}
+
+.intro {
+    font-size: 0.75rem;
+    color:rgb(0, 41, 41);
+    font-family: 'Merienda';
+    margin: 0 5vmin;
+}
+
+.signature {
+    font-family: 'Dancing Script';
+    font-size: 1.2rem;
+    margin: 0 5vmin;
+    background-color: teal;
+    background-image: linear-gradient(to top, rgb(0, 41, 41), cyan);
+    background-size: 100%;
+    background-repeat:no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 @media (max-width: 700px) {
