@@ -45,6 +45,129 @@
                         that isn't specified will be set to its default setting.
                     </p>
             </details>
+            <!--<details>-->
+                <summary>So the background doesn't have to be white?</summary>
+                <p>Thankfully no, the background doesn't have to be white if you don't want it to be.</p>
+                <p><span class="highlight">Background-color</span> literally colors the background.</p>
+                <p>To set the background color, you can use multiple ways to specify the color:</p>
+                <table>
+                    <head>
+                        <tr>
+                            <th scope="col">Type</th>
+                            <th scope="col">Format</th>
+                        </tr>
+                    </head>
+                    <tbody>
+                        <tr>
+                            <th scope="row">Keyword</th>
+                            <td>teal</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">HEX</th>
+                            <td>#008080</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">RGB*</th>
+                            <td>rgb(0, 128, 128)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">HSL</th>
+                            <td>hsl(180, 100%, 25%)</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">HWB</th>
+                            <td>hwb(180 0% 50%)</td>
+                        </tr>
+                    </tbody>
+                    <tfoot>
+                        <tr>
+                            <th scope="row" class="footer">Color</th>
+                            <td><div class="teal"></div></td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p><span class="color">Keyword:</span> Some colors are classified as <span class="highlight">named colors</span> 
+                    and thus are recoginized by a keyword. Of these named colors, some are considered standard or basic, while others 
+                    are <span class="highlight">currentcolor</span>. There is also a <span class="highlight">transparent</span> 
+                    keyword. More information can be found 
+                    <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">here.</a>
+                    <br>
+                    <br>
+                    Not all colors have a keyword associated with it, so it's useful to know how to use other 
+                    formats to specify color.
+                </p>
+                <p><span class="color">HEX:</span> A color hex code; the color is reprensented by a hexidecimal value that begins with 
+                    <span class="color">#</span> and made up of six digits whose values range between 0 and 9 and A to F. The first pair of 
+                    digits represents the amount of <span class="red">red</span> in the color, the second pair represents the amount of 
+                    <span class="green">green</span> in the color, and the last pair represents the amount of <span class="blue">blue</span> 
+                    in the color.
+                    <br>
+                    <br>
+                    As for the alphanumeric characters, 00 represents the lowest color intensity (closest to <span class="black">black</span>) 
+                    and FF represents the highest color intensity (closest to <span class="white">white</span>).
+                    <br>
+                    <br>
+                    With that in mind, what color do you think each of these HEX values are?
+                    <form>
+                        <div class="align">
+                            <label for="hex0">#000000:</label>
+                            <input type="text" id="hex0" name="hex0" minlength="3" maxlength="15">
+                            <input type="submit" value="ENTER">
+                        </div>
+                        <br>
+                        <div class="align">
+                            <label for="hex1">#FFFFFF:</label>
+                            <input type="text" id="hex1" name="hex1" minlength="3" maxlength="15">
+                            <input type="submit" value="ENTER">
+                        </div>
+                        <br>
+                        <div class="align">
+                            <label for="hex2">#FF0000:</label>
+                            <input type="text" id="hex2" name="hex2" minlength="3" maxlength="15">
+                            <input type="submit" value="ENTER">
+                        </div>
+                        <br>
+                        <div class="align">
+                            <label for="hex3">#00FF00:</label>
+                            <input type="text" id="hex3" name="hex3" minlength="3" maxlength="15">
+                            <input type="submit" value="ENTER">
+                        </div>
+                        <br>
+                        <div class="align">
+                            <label for="hex4">#0000FF:</label>
+                            <input type="text" id="hex4" name="hex4" minlength="3" maxlength="15">
+                            <input type="submit" value="ENTER">
+                        </div>
+                    </form>
+                </p>
+                <p><span class="color">RGB:</span> A color space relies on red, green, and blue light sources to determine the color.
+                    The first value is the red light source, the second value is the green light source, and the third is the blue light 
+                    source. Each  ranges between 0 and 255. Another way of thinking of RGB is how much of the color is made up of red, green, 
+                    and blue light.
+                    <br>
+                    <br>
+                    Besides RGB, there is also RGBA, which not only specifies the color, but 
+                    also opacity. The "A" stands for "Alpha" and represents opacity. The fourth value determines the opacity of the color. It's 
+                    really useful in some instances when you don't want certain elements to inherit opacity. The keyword 
+                    <span class="color italic">transparent</span> is a shortcut for <span class="highlight">rgba(0, 0, 0, 0)</span>.
+                </p>
+                <p><span class="color">HSL:</span> A color value that is determined by <span class="highlight">hue</span>, 
+                    <span class="highlight">saturation</span>, and <span class="highlight">lightness</span>.</p>
+                    <ul>
+                        <li>Hue &ndash; a degree between 0 and 360 on the color wheel. 0 = <span class="red">red</span>, 
+                            120 = <span class="green">green</span>, and 240 = <span class="blue">blue</span>.</li>
+                        <li>Saturation &ndash; a percentage between 0% (<span class="grey">grey</span>) and 100% (the full color)</li>
+                        <li>Lightness &ndash; a percentage of brightness, where 0% = <span class="black">black</span> and 
+                            100% = <span class="white">white</span></li>
+                    </ul>
+                <p><span class="color">HWB:</span> A color value that is determined by <span class="highlight">hue</span>, 
+                    <span class="highlight">whiteness</span>, and <span class="highlight">blackness</span>.</p>
+                    <ul>
+                        <li>Hue &ndash; same as in HSL</li>
+                        <li>Whiteness &ndash; a percentage between 0% (the full color) and 100% (<span class="white">white</span>).</li>
+                        <li>Blackness &ndash; a percentage between 0% (the full color) and 100% (<span class="black">black</span>).</li>
+                    </ul>
+            <!--</details>-->
             <details>
                 <summary>What are the background default settings?</summary>
                 <table>
@@ -121,6 +244,11 @@
                 <p>When using actual pictures as background images, the file name of the picture has to be encapsulated within 
                     an url(). Without the url(), the computer won't know where to find the image. 
                 </p>
+                <div class="code-box">
+                    body {<br>
+                        <span class="shift1">background-image: <span class="color">url(image.png)</span>;</span>
+                    }
+                </div>
                 <p>This method requires an HTTP request, which might make the web page load slower. If that's an issue, a 
                     data URI can be used instead because it saves HTTP Requests. The data URI replaces the image file, so you 
                     still need to remember to encapsulate the data URI within the url(). You can use online conversion tools 
@@ -129,14 +257,20 @@
                 <p>Multiple background images are separated by commas. If using actual pictures, each picture has its own url(), 
                     and each url() is separated by commas.
                 </p>
+                <div class="code-box">
+                    body {<br>
+                        <span class="shift1">background-image: <span class="color">url(image1.png)</span>, <span class="color">url(image2.png)</span>;</span>
+                    }
+                </div>
                 <p>If using gradients, the type of gradient must be specified.</p>
+                <p>There are six types of gradients to choose from:</p>
                 <ul>
-                    <li>conic-gradient()</li>
-                    <li>linear-gradient()</li>
-                    <li>radial-gradient()</li>
-                    <li>repeating-conic-gradient()</li>
-                    <li>repeating-linear-gradient()</li>
-                    <li>repeating-radial-gradient()</li>
+                    <li><a class="link" href="Conic_Gradients.html">conic-gradient()</a></li>
+                    <li><a class="link" href="Linear_Gradients.html">linear-gradient()</a></li>
+                    <li><a class="link" href="Radial_Gradients.html">radial-gradient()</a></li>
+                    <li><a class="link" href="Conic_Gradients.html">repeating-conic-gradient()</a></li>
+                    <li><a class="link" href="Linear_Gradients.html">repeating-linear-gradient()</a></li>
+                    <li><a class="link" href="Radial_Gradients.html">repeating-radial-gradient()</a></li>
                 </ul>
             </details>
             <details>
@@ -174,10 +308,6 @@
             <details>
                 <summary>What is a painting area?</summary>
                 <p><span class="highlight">Background-clip</span> specifies the painting area of the background image.</p>
-            </details>
-            <details>
-                <summary>Does the background have to be white?</summary>
-                <p><span class="highlight">Background-color</span> literally colors the background.</p>
             </details>
         </article>
         <button type="button" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>

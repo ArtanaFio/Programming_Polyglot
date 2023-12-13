@@ -1,4 +1,5 @@
-/* HTML Documents Style Sheet */
+/* The Programming Polyglot Web Page Style Sheet */
+
 
 * {
     box-sizing: border-box;
@@ -189,6 +190,25 @@ caption {
 
 }
 
+[scope="row"] {
+    background-color:rgb(129, 248, 248);
+    font-weight: normal;
+    color:rgb(0, 41, 41);
+    font-size: 0.75rem;
+}
+
+.footer {
+    font-weight: bold;
+    background-color:rgb(0, 41, 41);
+    color: white;
+    font-size: 1rem;
+}
+
+.teal {
+    background-color: teal;
+    padding: 0.6rem 3.5rem;
+}
+
 b,
 i {
     background-color: rgba(0, 255, 255, 0.452);
@@ -200,11 +220,12 @@ i {
     display: flex;
     flex-direction: column;
     margin-left: 10vmin;
-    width: 30%;
-    padding: 1rem 3rem;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
     background-color: white;
-    box-shadow: inset -2px -2px 10px darkcyan;
-    font-size: 0.50rem;
+    box-shadow:inset -3px -2px 4px darkcyan;
+    font-size: 0.75rem;
 }
 
 .shift1 {
@@ -248,4 +269,66 @@ ul {
     margin: 0 0.2rem;
     background-color: rgba(0, 255, 255, 0.425);
     box-shadow: -2px 2px 10px rgba(0, 255, 255, 0.425), -2px -2px 10px rgba(0, 255, 255, 0.425), 2px 2px 10px rgba(0, 255, 255, 0.425), 2px -2px 10px rgba(0, 255, 255, 0.425);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.red, .green, .blue, .black {
+    padding: 1px;
+    margin: 0 0.2rem;
+    background-color: rgba(255, 255, 255, 0.500);
+    box-shadow: -2px 2px 10px rgba(255, 255, 255, 0.500), -2px -2px 10px rgba(255, 255, 255, 0.500), 2px 2px 10px rgba(255, 255, 255, 0.500), 2px -2px 10px rgba(255, 255, 255, 0.500);
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width: 30%;
+}
+
+.align {
+    display: flex;
+    gap: 0.5rem;
+    align-items: flex-end;
+}
+
+label {
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+input[type="text"] {
+    height: 1rem;
+    font-size: 0.45rem;
+}
+
+input[type="submit"] {
+    font-weight: bold;
+    font-size: 0.75rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: teal;
+    background-color: cyan;
 }
