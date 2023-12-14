@@ -107,38 +107,49 @@
                     and FF represents the highest color intensity (closest to <span class="white">white</span>).
                     <br>
                     <br>
-                    With that in mind, what color do you think each of these HEX values are?
-                    <form>
-                        <div class="align">
+                    With that in mind, what color do you think each of these HEX values are?</span>
+                    <div class="pseudo-form">
+                        <div id="boxHex0" class="align">
                             <label for="hex0">#000000:</label>
+                            <div id="reveal0" class="swatch"></div>
                             <input type="text" id="hex0" name="hex0" minlength="3" maxlength="15">
-                            <input type="submit" value="ENTER">
+                            <button id="button-0" type="button" class="enter" onclick="check0()">ENTER</button>
+                            <span id="ans0" class="answer"></span>
                         </div>
                         <br>
-                        <div class="align">
+                        <div id="boxHex1" class="align">
                             <label for="hex1">#FFFFFF:</label>
+                            <div id="reveal1" class="swatch"></div>
                             <input type="text" id="hex1" name="hex1" minlength="3" maxlength="15">
-                            <input type="submit" value="ENTER">
+                            <button id="button-1" type="button" class="enter" onclick="check1()">ENTER</button>
+                            <span id="ans1" class="answer"></span>
                         </div>
                         <br>
-                        <div class="align">
+                        <div id="boxHex2" class="align">
                             <label for="hex2">#FF0000:</label>
+                            <div id="reveal2" class="swatch"></div>
                             <input type="text" id="hex2" name="hex2" minlength="3" maxlength="15">
-                            <input type="submit" value="ENTER">
+                            <button id="button-2" type="button" class="enter" onclick="check2()">ENTER</button>
+                            <span id="ans2" class="answer"></span>
                         </div>
                         <br>
-                        <div class="align">
+                        <div id="boxHex3" class="align">
                             <label for="hex3">#00FF00:</label>
+                            <div id="reveal3" class="swatch"></div>
                             <input type="text" id="hex3" name="hex3" minlength="3" maxlength="15">
-                            <input type="submit" value="ENTER">
+                            <button id="button-3" type="button" class="enter" onclick="check3()">ENTER</button>
+                            <span id="ans3" class="answer"></span>
                         </div>
                         <br>
-                        <div class="align">
+                        <div id="boxHex4" class="align">
                             <label for="hex4">#0000FF:</label>
+                            <div id="reveal4" class="swatch"></div>
                             <input type="text" id="hex4" name="hex4" minlength="3" maxlength="15">
-                            <input type="submit" value="ENTER">
+                            <button id="button-4" type="button" class="enter" onclick="check4()">ENTER</button>
+                            <span id="ans4" class="answer"></span>
                         </div>
-                    </form>
+                        <br>
+                    </div>
                 </p>
                 <p><span class="color">RGB:</span> A color space relies on red, green, and blue light sources to determine the color.
                     The first value is the red light source, the second value is the green light source, and the third is the blue light 
@@ -310,7 +321,7 @@
                 <p><span class="highlight">Background-clip</span> specifies the painting area of the background image.</p>
             </details>
         </article>
-        <button type="button" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
+        <button type="button" class="return" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
         <section id="copyright">Copyright &#169 2023</section>
     </body>
 </html>

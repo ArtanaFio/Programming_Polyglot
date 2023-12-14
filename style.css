@@ -124,7 +124,7 @@ strong {
     text-decoration: underline;
 }
 
-button {
+.return {
     width: fit-content;
     font-size: 1rem;
     font-style: italic;
@@ -141,7 +141,7 @@ button {
     border-bottom-color:rgb(0, 88, 88);
 }
 
-button:hover {
+.return:hover {
     background-color: teal;
     color:white;
     font-style: normal;
@@ -302,7 +302,7 @@ ul {
     color: black;
 }
 
-form {
+.psuedo-form {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -315,7 +315,8 @@ form {
     align-items: flex-end;
 }
 
-label {
+label,
+.answer {
     font-weight: bold;
     font-size: 0.75rem;
 }
@@ -325,10 +326,44 @@ input[type="text"] {
     font-size: 0.45rem;
 }
 
-input[type="submit"] {
+.enter {
     font-weight: bold;
     font-size: 0.75rem;
     font-family: Arial, Helvetica, sans-serif;
     color: teal;
     background-color: cyan;
+}
+
+.swatch {
+    width: 30px;
+    height: 30px;
+}
+
+.remove,
+.swatch {
+    display: none;
+}
+
+.visible {
+    display: block;
+}
+
+#reveal0 {
+    background-color: black;
+}
+
+#reveal1 {
+    background-color: white;
+}
+
+#reveal2 {
+    background-color: red;
+}
+
+#reveal3 {
+    background-color: green;
+}
+
+#reveal4 {
+    background-color: blue;
 }
