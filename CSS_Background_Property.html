@@ -104,7 +104,8 @@
                     <br>
                     <br>
                     As for the alphanumeric characters, 00 represents the lowest color intensity (closest to <span class="black">black</span>) 
-                    and FF represents the highest color intensity (closest to <span class="white">white</span>).
+                    and FF represents the highest color intensity (closest to <span class="white">white</span>): 
+                    <b>#<span class="red">$$</span><span class="green">$$</span><span class="blue">$$</span></b>.
                     <br>
                     <br>
                     With that in mind, what color do you think each of these HEX values are?</span>
@@ -151,17 +152,49 @@
                         <br>
                     </div>
                 </p>
-                <p><span class="color">RGB:</span> A color space relies on red, green, and blue light sources to determine the color.
-                    The first value is the red light source, the second value is the green light source, and the third is the blue light 
-                    source. Each  ranges between 0 and 255. Another way of thinking of RGB is how much of the color is made up of red, green, 
-                    and blue light.
-                    <br>
-                    <br>
-                    Besides RGB, there is also RGBA, which not only specifies the color, but 
-                    also opacity. The "A" stands for "Alpha" and represents opacity. The fourth value determines the opacity of the color. It's 
-                    really useful in some instances when you don't want certain elements to inherit opacity. The keyword 
-                    <span class="color italic">transparent</span> is a shortcut for <span class="highlight">rgba(0, 0, 0, 0)</span>.
+                <p><span class="color">RGB:</span> A color space relies on red, green, and blue light sources to determine the color. The first value 
+                    is the red light source, the second value is the green light source, and the third is the blue light source: 
+                    <b>rgb(<span class="red">$$$</span>, <span class="green">$$$</span>, <span class="blue">$$$</span></b>). Each  ranges between 0 and 255. 
+                    Another way of thinking of RGB is how much of the color is made up of red, green, and blue light.
                 </p>
+                <div id="RGB-generator" class="align">
+                    <label for="r">R:</label>
+                    <input class="red-gen" type="text" id="r" name="r" minlength="1" maxlength="3">
+                    <label for="g">G:</label>
+                    <input class="green-gen" type="text" id="g" name="g" minlength="1" maxlength="3">
+                    <label for="b">B:</label>
+                    <input class="blue-gen" type="text" id="b" name="b" minlength="1" maxlength="3">
+                    <button id="rgb" type="button" class="enter" onclick="generateRGB()">ENTER</button>
+                    <div id="rgb-sample" class="swatch"></div>
+                    <span id="hex-code"></span>
+                </div>
+                <p>What do you notice when the red, green, and blue values are all the same?</p>
+                <div id="grey-box" class="align">
+                    <button id="grey-button" type="button" class="enter" onclick="showGreyAnswer()">Click for answer</button>
+                    <span id="grey-answer"></span>
+                </div>
+                <p>Besides RGB, there is also RGBA, which not only specifies the color, but also opacity. The "A" stands for "Alpha" and represents 
+                    opacity. The fourth value determines the opacity of the color and ranges between 0 and 1 as it is a percentage of the opacity. It's really 
+                    useful in some instances when you don't want certain elements to inherit opacity.
+                </p>
+                <div id="RGBA-generator" class="align">
+                    <label for="ra">R:</label>
+                    <input class="red-gen" type="text" id="ra" name="ra" minlength="1" maxlength="3">
+                    <label for="ga">G:</label>
+                    <input class="green-gen" type="text" id="ga" name="ga" minlength="1" maxlength="3">
+                    <label for="ba">B:</label>
+                    <input class="blue-gen" type="text" id="ba" name="ba" minlength="1" maxlength="3">
+                    <label for="alpha">A:</label>
+                    <input class="alpha-gen" type="text" id="alpha" name="alpha" minlength="1" maxlength="3">
+                    <button id="rgba" type="button" class="enter" onclick="generateRGBA()">ENTER</button>
+                    <div id="rgba-sample" class="swatch"></div>
+                    <span id="alpha-hex-code"></span>
+                </div>
+                <p>Can you guess the RGBA value for the keyword <span class="color italic">transparent</span>?</p>
+                    <div id="transparent-box" class="align">
+                        <button id="transparent-button" type="button" class="enter" onclick="showTransparentAnswer()">Click for answer</button>
+                        <span id="transparent-answer"></span>
+                    </div>
                 <p><span class="color">HSL:</span> A color value that is determined by <span class="highlight">hue</span>, 
                     <span class="highlight">saturation</span>, and <span class="highlight">lightness</span>.</p>
                     <ul>

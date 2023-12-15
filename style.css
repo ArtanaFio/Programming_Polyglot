@@ -209,8 +209,7 @@ caption {
     padding: 0.6rem 3.5rem;
 }
 
-b,
-i {
+b, i, .reveal-answers {
     background-color: rgba(0, 255, 255, 0.452);
     padding: 5px;
     border-radius: 5px;
@@ -248,9 +247,9 @@ i {
     color: rgb(195, 240, 240);
 }
 
-p, 
-ul {
+p, ul, #grey-answer, #transparent-answer {
     font-size: 0.75rem;
+    line-height: 1.15rem;
 }
 
 .default:nth-child(even) td {
@@ -337,6 +336,7 @@ input[type="text"] {
 .swatch {
     width: 30px;
     height: 30px;
+    border: 2px solid white;
 }
 
 .remove,
@@ -366,4 +366,13 @@ input[type="text"] {
 
 #reveal4 {
     background-color: blue;
+}
+
+#r, #g, #b, #ra, #ga, #ba, #alpha {
+    width: 2.5rem;
+}
+
+#hex-code, #alpha-hex-code {
+    font-size: 0.75rem;
+    font-style: italic;
 }

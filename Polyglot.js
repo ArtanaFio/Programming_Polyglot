@@ -147,3 +147,70 @@ function check4() {
     questionBox4.appendChild(button4);
     questionBox4.appendChild(guess4); 
 }
+
+/*-----------------------------Generate RGB----------------------------*/
+
+function generateRGB() {
+    const redValue = document.getElementById("r").value;
+    const greenValue = document.getElementById("g").value;
+    const blueValue = document.getElementById("b").value;
+    const sampleColor = document.getElementById("rgb-sample");
+    const colorName = document.getElementById("hex-code");
+
+    if (redValue !== '' && greenValue !== '' && blueValue !== '') {
+        sampleColor.classList.add("visible");
+        sampleColor.style.backgroundColor = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+        colorName.textContent = `rgb(${redValue}, ${greenValue}, ${blueValue})`;
+    } else {
+        colorName.textContent = "Please enter a number betwee 0 and 255 for each value."
+    }
+}
+
+/*-----------------------------Show grey RGB answer----------------------------*/
+
+
+function showGreyAnswer() {
+    const greyBox = document.getElementById("grey-box");
+    const greyButton = document.getElementById("grey-button");
+    const greyAnswer = document.getElementById("grey-answer");
+
+    greyButton.classList.add("remove");
+    greyAnswer.classList.add("reveal-answers");
+    greyAnswer.textContent = "Whenever the values are the same, the corresponding color is a shade of pure grey.";
+
+    greyBox.appendChild(greyAnswer);
+}
+
+/*-----------------------------Generate RGBA----------------------------*/
+
+function generateRGBA() {
+    const redAlphaValue = document.getElementById("ra").value;
+    const greenAlphaValue = document.getElementById("ga").value;
+    const blueAlphaValue = document.getElementById("ba").value;
+    const alphaValue = document.getElementById("alpha").value;
+    const alphaSampleColor = document.getElementById("rgba-sample");
+    const alphaColorName = document.getElementById("alpha-hex-code");
+
+    if (redAlphaValue !== '' && greenAlphaValue !== '' && blueAlphaValue !== '' && alphaValue !== '') {
+        alphaSampleColor.classList.add("visible");
+        alphaSampleColor.style.backgroundColor = `rgb(${redAlphaValue}, ${greenAlphaValue}, ${blueAlphaValue}, ${alphaValue})`;
+        alphaColorName.textContent = `rgb(${redAlphaValue}, ${greenAlphaValue}, ${blueAlphaValue}, ${alphaValue})`;
+    } else {
+        colorName.textContent = "Please enter a number betwee 0 and 255 for each value."
+    }
+}
+
+/*-----------------------------Show transparent RGBA answer----------------------------*/
+
+
+function showTransparentAnswer() {
+    const transparentBox = document.getElementById("transparent-box");
+    const transparentButton = document.getElementById("transparent-button");
+    const transparentAnswer = document.getElementById("transparent-answer");
+
+    transparentButton.classList.add("remove");
+    transparentAnswer.classList.add("reveal-answers");
+    transparentAnswer.textContent = "Transparent: rgba(0, 0, 0, 0).";
+
+    transparentBox.appendChild(transparentAnswer);
+}
