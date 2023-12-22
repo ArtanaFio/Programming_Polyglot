@@ -14,12 +14,11 @@ logo.addEventListener('mouseleave', () => {
     longLogo.textContent = '';
 });
 
-/*-----------------------------Underconstruction response----------------------------*/
-
 container.appendChild(logo);
 container.appendChild(longLogo);
 
-const content = document.querySelector('.content');
+/*-----------------------------Underconstruction response----------------------------*/
+
 const noButtons = document.querySelectorAll('.nonexistent');
 const note = document.querySelector('.note');
 
@@ -29,7 +28,6 @@ noButtons.forEach((button) => {
     })
 });
 
-content.appendChild(note);
 
 /*-----------------------------Check color HEX code-----------------------------*/
 
@@ -214,3 +212,33 @@ function showTransparentAnswer() {
 
     transparentBox.appendChild(transparentAnswer);
 }
+
+/*-----------------------------Generate HSL----------------------------*/
+
+    let hueVal;
+    let satVal;
+    let litVal;
+
+    const hslValue = document.getElementById("hsl-code");
+
+     function updateHue(hueVal) {
+        document.getElementById('hueValue').textContent = `(${hueVal})`;
+        document.getElementById('hue-code').textContent = hueVal;
+    };
+    
+     function updateSaturation(satVal) {
+        document.getElementById('saturationValue').textContent = `(${satVal}%)`;
+        document.getElementById('sat-code').textContent = `${satVal}%`;
+    };
+
+     function updateLightness(litVal) {
+        document.getElementById('lightnessValue').textContent = `(${litVal}%)`;
+        document.getElementById('lit-code').textContent = `${litVal}%`;
+    };
+
+    console.log(hslValue.textContent);
+
+    
+    
+
+

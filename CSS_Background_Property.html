@@ -204,6 +204,27 @@
                         <li>Lightness &ndash; a percentage of brightness, where 0% = <span class="black">black</span> and 
                             100% = <span class="white">white</span></li>
                     </ul>
+                    <div id="HSL-generator">
+                        <div class="hsl">
+                            <div class="sections">
+                                <label for="hue">H:</label>
+                                <input type="range" id="hue" name="hue" min="0" max="360" onchange="updateHue(this.value);">
+                                <span id="hueValue" class="values">(180)</span>
+                            </div>
+                            <div class="sections">
+                                <label for="saturation">S:</label>
+                                <input type="range" id="saturation" name="saturation" min="0" max="100" onchange="updateSaturation(this.value);">
+                                <span id="saturationValue" class="values">(50%)</span>
+                            </div>
+                            <div class="sections">
+                                <label for="lightness">L:</label>
+                                <input type="range" id="lightness" name="lightness" min="0" max="100" onchange="updateLightness(this.value);">
+                                <span id="lightnessValue" class="values">(50%)</span>
+                            </div>
+                        </div>
+                        <div id="hsl-sample"></div>
+                        <p id="hsl-code">hsl(<span id="hue-code">180</span>, <span id="sat-code">50%</span>, <span id="lit-code">50%</span>)</p>
+                    </div>
                 <p><span class="color">HWB:</span> A color value that is determined by <span class="highlight">hue</span>, 
                     <span class="highlight">whiteness</span>, and <span class="highlight">blackness</span>.</p>
                     <ul>
