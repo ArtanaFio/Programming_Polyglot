@@ -223,7 +223,7 @@ function showTransparentAnswer() {
 
      function updateHue(hueVal) {
         document.getElementById('hueValue').textContent = `(${hueVal})`;
-        document.getElementById('hue-code').textContent = hueVal;
+        document.getElementById('hue-code').textContent = hueVal;    
     };
     
      function updateSaturation(satVal) {
