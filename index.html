@@ -3,28 +3,27 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Welcome to the Programming Polyglot</title>
-        <link rel="stylesheet" href="index.css">
-        <script src="Polyglot.js" defer></script>
+        <link rel="stylesheet" href="assets/css/index.css">
+        <script src="assets/js/Polyglot.js" defer></script>
     </head>
     <body>
-        <div id="top-bar">
-            <div class="logo-container">
-                <a class="logo" href="index.html">P</a>
-                <p class="title-name"></p>
-            </div>
-            <h1>Welcome to the Programming Polyglot!</h1>
-        </div>
-        <div class="content">
+        <main class="content">
+            <nav id="top-bar">
+                <div class="logo-container">
+                    <a class="logo" href="index.html">P</a>
+                    <p class="title-name"></p>
+                </div>
+                <h1>Welcome to the Programming Polyglot!</h1>
+            </nav>
             <h2 class="script">Thanks for visiting!</h2>
             <p class="intro">This is a personal project of mine that is sort of a virtual notebook of some of the topics I'm 
                 learning along the way on my full stack development journey. As I've only really started my journey at the 
                 beginning of 2023, I'm still in the early stages and have a long way to go, but I'm looking forward to 
                 discovering so much more down the road.
+                <br>
+                <br>
+                <span>&ndash; Niada</span>
             </p>
-            <br>
-            <div class="name-background">
-                <p class="signature">&ndash; Niada</p>
-            </div>
             <h2>Which language do you want to learn?</h2>
             <section id="languages">
                 <button type="button" title="HTML" onclick="window.location.href='HTML_list.html';">HTML</button>
@@ -32,7 +31,8 @@
                 <button type="button" title="JS" class="nonexistent">JavaScript</button>
             </section>
             <p class="note"></p>
-        </div>
-        <section id="copyright">Copyright &#169 2023</section>
+        </main>
+
+        <footer id="copyright">Copyright &#169 2023</footer>
     </body>
 </html>
