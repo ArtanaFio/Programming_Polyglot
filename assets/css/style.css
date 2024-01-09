@@ -1,8 +1,12 @@
 /* The Programming Polyglot Web Page Style Sheet */
 
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
+
 
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 html {
@@ -11,7 +15,6 @@ html {
 }
 
 body {
-    margin: 0;
     background-image: linear-gradient(to bottom, teal, rgb(0, 221, 221));
     background-repeat: no-repeat;
     background-size: cover;
@@ -73,14 +76,10 @@ body {
 
 .title-name {
     font-size: 1.5vmax;
-    padding: 0;
-    margin: 0;
     color:rgb(195, 240, 240);
 }
 
 h1 {
-    margin: 0;
-    padding: 0;
     font-size: 4vmax;
 }
 
@@ -89,13 +88,10 @@ article {
     padding: 3vmax;
 }
 
-li {
-    margin-bottom: 1vmax;
-}
-
 details {
     margin: 2vmax 0;
 }
+
 summary {
     color: white;
     padding: 1vmin;
@@ -110,6 +106,31 @@ summary:hover {
     width: fit-content;
 }
 
+p, ul, #grey-answer, #transparent-answer {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+p {
+    padding-left: 2rem;
+}
+
+ul, table {
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+
+}
+
+li {
+    margin-bottom: 1vmax;
+}
+
+b, i, .reveal-answers {
+    background-color: rgba(0, 255, 255, 0.452);
+    padding: 5px;
+    border-radius: 5px;
+}
+
 .color,
 .link {
     color: cyan;
@@ -122,6 +143,44 @@ summary:hover {
 
 strong {
     text-decoration: underline;
+}
+
+.coding {
+    font-family: 'Sometype Mono';
+    font-size: 2.5vmin;
+}
+
+.unique {
+    font-style: italic;
+    color: darkseagreen;
+}
+
+.unique2 {
+    background-color: rgba(0, 255, 255, 0.25);
+}
+
+.left {
+    text-align: left;
+}
+
+.type {
+    color: darkmagenta;
+}
+
+.class {
+    color: magenta;
+}
+
+.id {
+    color: blueviolet;
+}
+
+.attr {
+    color: indigo;
+}
+
+.value {
+    color: darkcyan;
 }
 
 .return {
@@ -210,12 +269,6 @@ caption {
     padding: 0.6rem 3.5rem;
 }
 
-b, i, .reveal-answers {
-    background-color: rgba(0, 255, 255, 0.452);
-    padding: 5px;
-    border-radius: 5px;
-}
-
 .code-box {
     display: flex;
     flex-direction: column;
@@ -246,11 +299,6 @@ b, i, .reveal-answers {
 
 .resource:hover {
     color: rgb(195, 240, 240);
-}
-
-p, ul, #grey-answer, #transparent-answer {
-    font-size: 0.75rem;
-    line-height: 1.15rem;
 }
 
 .default:nth-child(even) td {
@@ -454,4 +502,19 @@ input[type="range"]::-webkit-slider-runnable-track {
 .transparent:hover {
     background-color: transparent;
     box-shadow: none;
+}
+
+[href="#this-link"] {
+    color: blue;
+}
+[href="#this-link"]:hover {
+    color: darkseagreen;
+}
+
+[href="#this-link"]:active {
+    color: white;
+}
+
+[href="#this-link"]:focus {
+    background-color: cyan;
 }

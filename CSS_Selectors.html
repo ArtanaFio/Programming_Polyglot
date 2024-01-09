@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selectors</title>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/js/Polyglot.js" defer></script>
+    </head>
+    <body>
+        <div id="top-bar">
+            <div class="logo-container">
+                <a class="logo" href="index.html">P</a>
+                <p class="title-name"></p>
+            </div>
+            <h1>CSS Selectors</h1>
+        </div>
+        <article>
+            <details>
+                <summary>What are CSS selectors?</summary>
+                <p>CSS selectors act as a sort of <strong>label for identifying specific HTML elements</strong> to apply style to them. There are different
+                    types of CSS.
+                </p>
+            </details>
+            <details>
+                <summary>What are the different kinds of CSS selectors?</summary>
+                <p>There are <span class="color">common selectors</span> that select elements based on their type, class, and ID.</p>
+                <p>Relatiionships between HTML elements are used by<span class="color">child selectors</span> and <span class="color">sibling selectors</span> to select HTML elements.</p>
+                <p><span class="color">Attribute selectors</span> target HTML elements that have a specific attribute or value.</p>
+            </details>
+            <details>
+                <summary>What are the common selectors?</summary>
+                <p>Common selectors are the most often used because they are the simplest to understand and apply.</p>
+                <ul>
+                    <li><span class="color">Type selector</span> targets an element by it's tag name.</li>
+                    <li><span class="color">Class selector</span> assigns a class attribute to the element and is denoted by ".class-name". Classes are useful when you want to apply the same style to multiple HTML elements and when you want to apply more than one set of styles to an element.</li>
+                    <li><span class="color">ID selector</span>assigns an ID attribute to the element and is denoted by "#ID-name". IDs are best used for elements that have very unique styles that are specific to that one HTML element because you can only define one Id for each element and cannot reuse that ID's name.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Common Selector</th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>Type</td>
+                        <td class="coding">
+                            &lt;h1&gt;
+                        </td>
+                        <td class="coding left"><span class="type">h1</span> {<br>
+                            <span class="shift1">font-size: 5rem;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Class</td>
+                        <td class="coding">&lt;p <span class="attr">class</span>=<span class="value">"color"</span>&gt;</td>
+                        <td class="coding left"><span class="class">.color</span> {<br>
+                            <span class="shift1">color: 'cyan';</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>ID</td>
+                        <td class="coding">&lt;p <span class="attr">id</span>=<span class="value">"first-line"</span>&gt;</td>
+                        <td class="coding left"><span class="id">#first-line</span> {<br>
+                            <span class="shift1">font-weight: bold;</span><br>}
+                        </td>
+                    </tr>
+                </table>
+            </details>
+            <details>
+                <summary>What are child selectors?</summary>
+                <p>This is one of the selector types that target elements based on their relationship to other elements, specifically the parent-child relationship.</p>
+                <ul>
+                    <li><span class="color">Descendant selector</span> not only does it select the child of the parent element, it selects all descendants of that parent element.</li>
+                    <li><span class="color">Direct child selector</span> only targets direct child elements of the parent element.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Child Selectors</th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>Descendant</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;p&gt;<span class="unique">This paragraph is selected</span>&lt;/&gt;</span><br>
+                            <span class="shift1">&lt;div&gt;</span><br>
+                            <span class="shift2">&lt;p&gt;<span class="unique">This paragraph is selected</span>&lt;/&gt;</span><br>
+                            <span class="shift1">&lt;/div&gt;</span><br>
+                            &lt;/article&gt;<br>
+                        </td>
+                        <td class="coding left"><span class="type">article p</span>{<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Direct child</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;p&gt;<span class="unique">This paragraph is selected</span>&lt;/&gt;</span><br>
+                            <span class="shift1">&lt;div&gt;</span><br>
+                            <span class="shift2">&lt;p&gt;This paragraph is not selected&lt;/&gt;</span><br>
+                            <span class="shift1">&lt;/div&gt;</span><br>
+                            &lt;/article&gt;<br>
+                        </td>
+                        <td class="coding left"><span class="type">article</span> &gt; <span class="type">p</span>{<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}
+                        </td>
+                    </tr>
+                </table>
+            </details>
+            <details>
+                <summary>What are sibling selectors?</summary>
+                <p>This is the other selector that targets elements based on relationships. Sibling selectors select elements that have the same parent element.</p>
+                <ul>
+                    <li><span class="color">General sibling selector</span> will select all of the same sibling that come after the specified element. Using the family metaphor, it select all younger siblings that are identical twins.</li>
+                    <li><span class="color">Adjacent sibling selector</span> is more specific and only selects the next closest sibling, regardless if it has a twin.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Sibling Selector</th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>General sibling</td>
+                        <td class="coding left">
+                            &lt;section&gt;<br>
+                            <span class="shift1">&lt;div&gt; </span><br>
+                            <span class="shift2">&lt;p&gt;paragraph&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p <span class="attr">class</span>=<span class="value">"chosen"</span>&gt;<span class="unique">This heading is selected</span>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p <span class="attr">class</span>=<span class="value">"chosen"</span>&gt;<span class="unique">This heading is selected</span>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;paragraph&lt;/p&gt;</span>
+                        </td>
+                        <td class="coding left"><span class="type">div</span> ~ <span class="class">.chosen</span>{<br>
+                            color: darkseagreen;<br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Adjacent sibling</td>
+                        <td class="coding left">
+                            &lt;section&gt;<br>
+                            <span class="shift1">&lt;div&gt; </span><br>
+                            <span class="shift2">&lt;p&gt;paragraph&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p <span class="attr">class</span>=<span class="value">"chosen"</span>&gt;<span class="unique">This heading is selected</span>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;heading&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;paragraph&lt;/p&gt;</span>
+                        </td>
+                        <td class="coding left"><span class="type">div</span> + <span class="class">.chosen</span>{<br>
+                            color: darkseagreen;<br>}
+                        </td>
+                    </tr>
+                </table>
+            </details>
+            <details>
+                <summary>What are attribute selectors?</summary>
+                <p>These selectors use the HTML element's attributes and their values to apply CSS styling. All attribute selectors are encased in square brackets.</p>
+                <ul>
+                    <li><span class="color">Attribute present selector</span> selects the HTML elements that have the specified attribute even if there is no value.</li>
+                    <li><span class="color">Attribute equals selector</span> selects the HTML elements that have the specified value for the attribute.</li>
+                    <li><span class="color">Attribute contains selector</span> selects the HTML elements that contains a specified string in the attribute's value.</li>
+                    <li><span class="color">Attribute begins with selector</span> selects the HTML elements that begins with a specified string in the attribute's value.</li>
+                    <li><span class="color">Attribute ends with selector</span> selects the HTML elements that ends with a specified string in the attribute's value.</li>
+                    <li><span class="color">Attribute spaced selector</span> selects the HTML elements that have a space in the attribute's value. Only one of the terms must match for the selection to work.</li>
+                    <li><span class="color">Attribute hyphenated selector</span> selects the HTML elements that have attributes with hyphenated values. The first half of the hyphenated value must be stated for the selection to work.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Attribute Selector</th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>Attribute present selector</td>
+                        <td class="coding left">
+                            &lt;form&gt;<br>
+                            <span class="shift1">&lt;label <span class="attr">for</span>=<span class="value">"street"</span>&gt;Enter street address:&lt;/label&gt;</span><br>
+                            <span class="shift1">&lt;input <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"street"</span>&gt;</span><br>
+                            <span class="shift1">&lt;label <span class="attr">for</span>=<span class="value">"city"</span>&gt;Enter city:&lt;/label&gt;</span><br>
+                            <span class="shift1">&lt;input <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"city"</span>&gt;</span><br>
+                            <span class="shift1 unique2">&lt;button <span class="attr">type</span>=<span class="value">"submit"</span><span class="attr">value</span>=<span class="value">"Submit"</span>&gt;Submit:&lt;/button&gt;</span><br>
+                            <span class="shift1 unique2">&lt;button <span class="attr">type</span>=<span class="value">"reset"</span><span class="attr">value</span>=<span class="value">"Reset"</span>&gt;Reset&lt;/button&gt;</span><br>
+                            &lt;/form&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">button</span>[type] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attribute equals selector</td>
+                        <td class="coding left">
+                            &lt;form&gt;<br>
+                            <span class="shift1 unique2">&lt;label <span class="attr">for</span>=<span class="value">"street"</span>&gt;Enter street address:&lt;/label&gt;</span><br>
+                            <span class="shift1">&lt;input <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"street"</span>&gt;</span><br>
+                            <span class="shift1">&lt;label <span class="attr">for</span>=<span class="value">"city"</span>&gt;Enter city:&lt;/label&gt;</span><br>
+                            <span class="shift1">&lt;input <span class="attr">type</span>=<span class="value">"text"</span> <span class="attr">id</span>=<span class="value">"city"</span>&gt;</span><br>
+                            <span class="shift1">&lt;button <span class="attr">type</span>=<span class="value">"submit"</span><span class="attr">value</span>=<span class="value">"Submit"</span>&gt;Submit:&lt;/button&gt;</span><br>
+                            <span class="shift1">&lt;button <span class="attr">type</span>=<span class="value">"reset"</span><span class="attr">value</span>=<span class="value">"Reset"</span>&gt;Reset&lt;/button&gt;</span><br>
+                            &lt;/form&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">label</span>[for="street"] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attribute contains selector</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.anotherwebsite.com/"</span>&gt;<strong>Click here</strong>&lt;/h1&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"autumn leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.orginialwebsite.org/"</span>&gt;<strong>link</strong>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"tea leaves"</span><span class="attr">src</span>=<span class="value">"Images/tea_.png"</span>&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"green leaves"</span><span class="attr">src</span>=<span class="value">"Images/green_.png"</span>&gt;</span><br>
+                            &lt;/article&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">img</span>[src*="n"] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attribute begins with selector</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.anotherwebsite.com/"</span>&gt;<strong>Click here</strong>&lt;/h1&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"autumn leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.orginialwebsite.org/"</span>&gt;<strong>link</strong>&lt;/p&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"tea leaves"</span><span class="attr">src</span>=<span class="value">"Images/tea_.png"</span>&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"green leaves"</span><span class="attr">src</span>=<span class="value">"Images/green_.png"</span>&gt;</span><br>
+                            &lt;/article&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">img</span>[src^="Images/"] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attribute ends with selector</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.anotherwebsite.com/"</span>&gt;<strong>Click here</strong>&lt;/h1&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"autumn leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn_.png"</span>&gt;</span><br>
+                            <span class="shift1 unique2">&lt;a <span class="attr">href</span>=<span class="value">"https://www.orginialwebsite.org/"</span>&gt;<strong>link</strong>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"tea leaves"</span><span class="attr">src</span>=<span class="value">"Images/tea_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"green leaves"</span><span class="attr">src</span>=<span class="value">"Images/green_.png"</span>&gt;</span><br>
+                            &lt;/article&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">a</span>[href$=".org/"] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attribute spaced selector</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1 unique2">&lt;a <span class="attr">href</span>=<span class="value">"#"</span> <span class="attr">rel</span>=<span class="value">"tag nofollow"</span>&gt;<strong>Click here</strong>&lt;/h1&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"autumn leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn_.png"</span>&gt;</span><br>
+                            <span class="shift1 unique2">&lt;a <span class="attr">href</span>=<span class="value">"https://www.orginialwebsite.org/"</span>&gt;<strong>link</strong>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"tea leaves"</span><span class="attr">src</span>=<span class="value">"Images/tea_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"green leaves"</span><span class="attr">src</span>=<span class="value">"Images/green_.png"</span>&gt;</span><br>
+                            &lt;/article&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">a</span>[rel~="tag"] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Attribute hyphenated selector</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"#"</span> <span class="attr">rel</span>=<span class="value">"tag nofollow"</span>&gt;<strong>Click here</strong>&lt;/h1&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"autumn-leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn-leaves_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.orginialwebsite.org/"</span>&gt;<strong>link</strong>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"tea leaves"</span><span class="attr">src</span>=<span class="value">"Images/tea_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"autumn leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn_.png"</span>&gt;</span><br>
+                            &lt;/article&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">img</span>[alt|="autumn"] {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                </table>
+            </details>
+            <details>
+                <summary>What are pseudo-clases?</summary>
+                <p>Similar to classes, except pseudo-classes select HTML elements based on their structure or position within the DOM tree. Styles are 
+                    applied to these elements depending on how the user interacts with the element, link states, etc. They are preceeded by a colon.</p>
+                <ul>
+                    <li><span class="color">Link pseudo-classes</span> only has two regarding links: <i>:link</i> and <i>:visited</i>. These pseudo-classes change the link's style based on if it has been visited or not.</li>
+                    <li><span class="color">User action pseudo-classes</span> apply styles to elements based on how the user interacts with them. <i>:hover</i> is applied when the user hovers the mouse over the element. <i>:active</i> applies style to an element when the user clicks on it. <i>:focus</i> applies style to an element when it becomes the focus point of the page.</li>
+                    <li><span class="color">User interface state pseudo-classes</span> applies styles to the user interface state of elements, particularly form elements. <i>:enabled</i> targets an input when it's enabled (its default state). <i>:disabled</i> targets a disabled element. The <i>:checked</i> pseudo-class is used on checkboxes and radio buttons when they have been checked. The <i>:indeterminate</i> pseudo-class is used on the indeterminate state (neither checked nor unchecked) states of these elements.</li>
+                    <li><span class="color">Structural and position pseudo-classes</span> includes many options for targeting HTML elements because these pseudo-classes are based on the location of the elements within the DOM tree. These pseudo-classes can select the first, last, and the only child of the parent element.</li>
+                    <li>The <span class="color">Target pseudo-class</span> styles HTML elements when their ID matches the URI fragment identifier(#).</li>
+                    <li>The <span class="color">Empty pseudo-class</span> selects the HTML element that doesn't have any children or text nodes: the empty elements.</li>
+                    <li><span class="color">Negation pseudo-class</span> selects an element not represented by the stated value.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Pseudo-class</th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>Link</td>
+                        <td class="coding left">
+                            &lt;a <span class="attr">href</span>=<span class="value">"https://www.link.com"</span>&gt;<strong class="unique">link</strong>&lt;/a&gt;<br>
+                            &lt;a <span class="attr">href</span>=<span class="value">"https://www.link.com"</span>&gt;<span class="white">link</span>&lt;/a&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="class">a:link</span> {<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                            <span class="class">a:visited</span> {<br>
+                            <span class="shift1">color: white;</span><br>
+                            <span class="shift1">text-decoration: none;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Action</td>
+                        <td class="coding left">
+                            <span>&lt;a <span class="attr">href</span>=<span class="value">"https://www.anotherwebsite.com/"</span>&gt;<a href="#this-link">Click here</a>&lt;/h1&gt;</span><br>
+                            <br>
+                            <span class="italic">(Interact with the "Click here" link to see how the style changes)</span>
+                        </td>
+                        <td class="coding left">
+                            <span class="class">a:hover</span> {<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                            <span class="class">a:active</span> {<br>
+                            <span class="shift1">color: white;</span><br>}<br><br>
+                            <span class="class">a:focus</span> {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>State</td>
+                        <td class="coding left">
+                            &lt;button&gt;<span class="unique">This button is enabled</span>&lt;/button&gt;<br><br>
+                            &lt;button&gt;<span class="white">This button is disabled</span>&lt;/button&gt;<br><br>
+                            &lt;button&gt;<span class="unique2">This button is checked</span>&lt;/button&gt;<br><br>
+                            &lt;button&gt;<strong>This button is indeterminate</strong>&lt;/button&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="class">button:enabled</span> {<br>
+                                <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                                <span class="class">button:disabled</span> {<br>
+                                <span class="shift1">color: white;</span><br>}<br><br>
+                                <span class="class">button:checked</span> {<br>
+                                <span class="shift1">background-color: cyan;</span><br>}<br><br>
+                                <span class="class">button:indeterminate</span> {<br>
+                                <span class="shift1">text-decoration: underline;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Structural</td>
+                        <td class="coding left">
+                            &lt;div&gt;<br>
+                            <span class="shift1">&lt;p&gt;<span class="unique">paragraph 1 is the first child</span>&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;paragraph 2&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;paragraph 3&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;paragraph 4&lt;/p&gt;</span><br>
+                            <span class="shift1">&lt;p&gt;<strong>paragraph 5 is the last child</strong>&lt;/p&gt;</span><br>
+                            &lt;/div&gt;<br>
+                            &lt;div&gt;<br>
+                            <span class="shift1">&lt;p&gt;<span class="unique2">paragraph 1 is the only child</span>&lt;/p&gt;</span><br>
+                            &lt;/div&gt;<br>
+                        </td>
+                        <td class="coding left">
+                            <span class="class">p:first-child</span>{<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                            <span class="class">p:last-child</span>{<br>
+                            <span class="shift1">text-decoration: underline;</span><br>}<br><br>
+                            <span class="class">p:only-child</span>{<br>
+                            <span class="shift1">background-color: cyan;</span><br>}<br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Target</td>
+                        <td class="coding left">
+                            &lt;h1&gt;Heading 1&lt;/h1&gt;<br>
+                            <span class="shift1">&lt;p&gt;paragraph&lt;/p&gt;</span><br>
+                            &lt;h1 <span class="attr">id</span>=<span class="value">"link"</span> &gt;<span class="unique">Heading 2</span>&lt;/h1&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="class">h1:target</span>{<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Empty</td>
+                        <td class="coding left">
+                            <span class="unique2">&lt;div&gt;&lt;/div&gt;</span><br>
+                            &lt;div&gt;some content&lt;/div&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="class">div:empty</span>{<br>
+                            <span class="shift1">background-color: cyan;</span><br>}<br><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Negation</td>
+                        <td class="coding left">
+                            &lt;article&gt;<br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.anotherwebsite.com/"</span>&gt;<strong>Click here</strong>&lt;/h1&gt;</span><br>
+                            <span class="shift1">&lt;img <span class="attr">alt</span>=<span class="value">"autumn leaves"</span><span class="attr">src</span>=<span class="value">"Images/autumn_.png"</span>&gt;</span><br>
+                            <span class="shift1">&lt;a <span class="attr">href</span>=<span class="value">"https://www.orginialwebsite.org/"</span>&gt;<strong>link</strong>&lt;/p&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"tea leaves"</span><span class="attr">src</span>=<span class="value">"Images/tea_.png"</span>&gt;</span><br>
+                            <span class="shift1 unique2">&lt;img <span class="attr">alt</span>=<span class="value">"green leaves"</span><span class="attr">src</span>=<span class="value">"Images/green_.png"</span>&gt;</span><br>
+                            &lt;/article&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="class">img:not(alt="autumn leaves")</span>{<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                        </td>
+                    </tr>
+                </table>
+            <details>
+                <summary>What are pseudo-elements?</summary>
+                <p>They are dynamic elements that are created when specified in the CSS code. Only one pseudo-element can be used within a selector at a time.</p>
+                <ul>
+                    <li><span class="color">Textual pseudo-elements</span>target specific textual content. <i>:first-letter</i> selects the first letter of text inside the HTML element. <i>:first-line</i> identifies and selects the first line of text inside the element.</li>
+                    <li><span class="color">Generated pseudo-elements</span> allow the developer to add more content or user interface components to the page without overcrowding the document with unsemantic elements. Both <i>:before</i> and <i>:after</i> create inline level pseudo-elements inside the selected element. These are commonly used with the content property to add nonimportant information. The :before pseudo-element is placed before the selected element while the :after pseud-element is placed after it.</li>
+                    <li>The <span class="color">Fragment pseudo-element</span> is <i>::selection</i>, which selects the part of the HTML document that has been selected or highlighted by the user. Not all browswers support this pseudo-element, so the <i>::-moz-selection</i> was created to work with Firefox. Keep in mind this pseudo-element can only be styled with the <strong>color</strong>, <strong>background</strong>, <strong>background-color</strong>, and <strong>text-shadow</strong> CSS properties.</li>
+                </ul>
+                <table>
+                    <tr>
+                        <th>Pseudo-element</th>
+                        <th>HTML</th>
+                        <th>CSS</th>
+                    </tr>
+                    <tr>
+                        <td>Textual</td>
+                        <td class="coding left">
+                            &lt;p <span class="attr">class</span>=<span class="value">"quote"</span>&gt;<span class="unique">q</span>uoted paragraph&lt;/p&gt;<br><br>
+                            &lt;p <span class="attr">class</span>=<span class="value">"quote2"</span>&gt;<span class="unique">second quoted paragraph</span>&lt;/p&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">.quote::first-letter</span> {<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                            <span class="type">.quote2::first-line</span> {<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Generated</td>
+                        <td class="coding left">
+                            &lt;div&gt;<span class="unique">some content</span>&lt;/div&gt;<br><br>
+                            &lt;div&gt;Some content&lt;/div&gt;<br><br>
+                            &lt;div&gt;<span class="white">Some content</span>&lt;/div&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">div::before</span> {<br>
+                            <span class="shift1">color: darkseagreen;</span><br>}<br><br>
+                            <span class="type">div::after</span> {<br>
+                            <span class="shift1">color: white;</span><br>}
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fragment</td>
+                        <td class="coding left">
+                            &lt;p&gt;<i>Paragraph content</i>&lt;/p&gt;
+                        </td>
+                        <td class="coding left">
+                            <span class="type">p::selection</span> {<br>
+                            <span class="shift1">background-color: cyan;</span><br>}<br><br>
+                            <span class="type">::-moz-selection</span> {<br>
+                                <span class="shift1">color: darkseagreen;</span><br>}
+                        </td>
+                    </tr>
+                </table>
+            </details>
+        </article>
+        <button type="button" class="return" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
+        <section id="copyright">Copyright &#169 2023</section>
+    </body>
+</html>
