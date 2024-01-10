@@ -26,16 +26,16 @@ body {
 
 main {
     flex: 1 0 auto;
-    background-image: linear-gradient(to bottom, rgb(0, 121, 121), cyan);
+    background-color: rgb(195, 240, 240);
+    /*background-image: linear-gradient(to bottom, rgba(0, 121, 121, 0.75), rgba(127, 255, 255, 0.75));*/
     background-repeat: no-repeat;
     background-size: cover;
 }
 
 nav {
-    background-color: teal;
-    width: 100vw;
-    height: 25vh;
-    box-shadow: 0 3vmin 10px rgb(0, 88, 88);
+    background-color: darkcyan;
+    height: 15vh;
+    box-shadow: 0 1vmin 10px rgb(0, 88, 88);
     color: rgb(0, 41, 41);
     font-weight: bold;
     display: flex;
@@ -43,6 +43,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    margin-top: 1vmax;
     padding: 0 2vmax;
 }
 
@@ -86,16 +87,23 @@ nav {
     color:rgb(195, 240, 240);
 }
 
+article {
+    background-color: rgba(255, 255, 255, 0.75);
+    margin: 1.5vmax;
+    border-radius: 5px;
+    box-shadow: 0 0.25vmin 10px rgb(0, 121, 121);
+}
+
 h1 {
-    font-size: 4vmax;
+    font-size: 3.5vmax;
 }
 
 h2 {
-    color: white;
+    color: darkcyan;
     font-size: 4vmax;
     text-align: center;
-    margin-top: 2vmax;
-    margin-bottom: 2vmax;
+    margin-top: 1vmax;
+    margin-bottom: 1vmax;
 }
 
 h2, .intro {
@@ -111,27 +119,31 @@ h2, .intro {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 3vmax;
+    padding: 2vmax;
 }
 button {
     padding: 3vmin;
     font-size: 1rem;
     border-radius: 10px;
     background-color: rgb(162, 238, 238);
+    border-top: 2px solid rgb(162, 238, 238);
+    border-left: 2px solid rgb(162, 238, 238);
+    border-right: 2px solid darkcyan;
+    border-bottom: 2px solid darkcyan;
+}
+
+button:hover {
+    background-image: radial-gradient(cyan, rgb(0, 121, 121)) ;
+    color: white;
     border-top: 2px solid teal;
     border-left: 2px solid teal;
     border-right: 2px solid rgb(0, 41, 41);
     border-bottom: 2px solid rgb(0, 41, 41);
 }
 
-button:hover {
-    background-image: radial-gradient(cyan, rgb(0, 121, 121)) ;
-    color: white;
-}
-
 footer {
     flex-shrink: 0;
-    background-color: teal;
+    background-color: darkcyan;
     color: white;
     font-style: italic;
     font-size: 0.5rem;
@@ -160,12 +172,21 @@ footer {
 
 @media (max-width: 700px) {
     nav {
-        padding: 2vmax;
+        padding-top: 1.5vmax;
+        padding-bottom: 3vmax;
+        margin-top: 0;
+        margin-bottom: 3vmax;
+    }
+    article {
+        padding: 1vmax;
     }
     p {
         text-align: center;
     }
     h1 {
         text-align: right;
+    }
+    h2 {
+        font-size: 5vmax
     }
 }
