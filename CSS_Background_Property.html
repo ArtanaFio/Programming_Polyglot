@@ -3,379 +3,413 @@
     <head>
         <meta charset="UTF-8" name="viewport" content="width=device-width, initial-scale=1.0">
         <title>CSS Background Property</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="Polyglot.js" defer></script>
+        <link rel="stylesheet" href="assets/css/style.css">
+        <script src="assets/js/Polyglot.js" defer></script>
     </head>
     <body>
-        <div id="top-bar">
-            <div class="logo-container">
-                <a class="logo" href="index.html">P</a>
-                <p class="title-name"></p>
-            </div>
-            <h1>CSS Background Property</h1>
-        </div>
-        <article>
-            <details>
-                <summary>What is the CSS Background Property?</summary>
-                    <p>The background property falls under the awesome category of <span class="highlight">shorthand properties</span>.</p>
-                    <p>The background property can specify up to<span class="highlight">eight background-related CSS properties</span> at once:</p>
-                    <ul>
-                        <li>background-attachement</li>
-                        <li>background-clip</li>
-                        <li>background-color</li>
-                        <li>background-image</li>
-                        <li>background-origin</li>
-                        <li>background-position</li>
-                        <li>background-repeat</li>
-                        <li>background-size</li>
-                    </ul>
-                    <p>When entering values for the background CSS property, the order does not matter, but one recommended 
-                        order is:
-                    </p>
-                    <p>[<span class="color">image</span>], 
-                        [<span class="color">position</span> / <span class="color">size</span>], 
-                        [<span class="color">repeat</span>], [<span class="color">attachment</span>], 
-                        [<span class="color">origin</span>], [<span class="color">clip</span>], 
-                        [<span class="color">color</span>]
-                    </p>
-                    <p>Regardless of the exact order, the size value always comes right after the position value 
-                        and must be separated with "/".
-                    </p>
-                    <p>Also note that not all properties need to be specified to use the shorthand property; any property 
-                        that isn't specified will be set to its default setting.
-                    </p>
-            </details>
-            <!--<details>-->
-                <summary>So the background doesn't have to be white?</summary>
-                <p>Thankfully no, the background doesn't have to be white if you don't want it to be.</p>
-                <p><span class="highlight">Background-color</span> literally colors the background.</p>
-                <p>To set the background color, you can use multiple ways to specify the color:</p>
-                <table>
-                    <head>
-                        <tr>
-                            <th scope="col">Type</th>
-                            <th scope="col">Format</th>
-                        </tr>
-                    </head>
-                    <tbody>
-                        <tr>
-                            <th scope="row">Keyword</th>
-                            <td>teal</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">HEX</th>
-                            <td>#008080</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">RGB*</th>
-                            <td>rgb(0, 128, 128)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">HSL</th>
-                            <td>hsl(180, 100%, 25%)</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">HWB</th>
-                            <td>hwb(180 0% 50%)</td>
-                        </tr>
-                    </tbody>
-                    <tfoot>
-                        <tr>
-                            <th scope="row" class="footer">Color</th>
-                            <td><div class="teal"></div></td>
-                        </tr>
-                    </tfoot>
-                </table>
-                <p><span class="color">Keyword:</span> Some colors are classified as <span class="highlight">named colors</span> 
-                    and thus are recoginized by a keyword. Of these named colors, some are considered standard or basic, while others 
-                    are <span class="highlight">currentcolor</span>. There is also a <span class="highlight">transparent</span> 
-                    keyword. More information can be found 
-                    <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">here.</a>
-                    <br>
-                    <br>
-                    Not all colors have a keyword associated with it, so it's useful to know how to use other 
-                    formats to specify color.
-                </p>
-                <p><span class="color">HEX:</span> A color hex code; the color is reprensented by a hexidecimal value that begins with 
-                    <span class="color">#</span> and made up of six digits whose values range between 0 and 9 and A to F. The first pair of 
-                    digits represents the amount of <span class="red">red</span> in the color, the second pair represents the amount of 
-                    <span class="green">green</span> in the color, and the last pair represents the amount of <span class="blue">blue</span> 
-                    in the color.
-                    <br>
-                    <br>
-                    As for the alphanumeric characters, 00 represents the lowest color intensity (closest to <span class="black">black</span>) 
-                    and FF represents the highest color intensity (closest to <span class="white">white</span>): 
-                    <b>#<span class="red">$$</span><span class="green">$$</span><span class="blue">$$</span></b>.
-                    <br>
-                    <br>
-                    With that in mind, what color do you think each of these HEX values are?</span>
-                    <div class="pseudo-form">
-                        <div id="boxHex0" class="align">
-                            <label for="hex0">#000000:</label>
-                            <div id="reveal0" class="swatch"></div>
-                            <input type="text" id="hex0" name="hex0" minlength="3" maxlength="15">
-                            <button id="button-0" type="button" class="enter" onclick="check0()">ENTER</button>
-                            <span id="ans0" class="answer"></span>
-                        </div>
-                        <br>
-                        <div id="boxHex1" class="align">
-                            <label for="hex1">#FFFFFF:</label>
-                            <div id="reveal1" class="swatch"></div>
-                            <input type="text" id="hex1" name="hex1" minlength="3" maxlength="15">
-                            <button id="button-1" type="button" class="enter" onclick="check1()">ENTER</button>
-                            <span id="ans1" class="answer"></span>
-                        </div>
-                        <br>
-                        <div id="boxHex2" class="align">
-                            <label for="hex2">#FF0000:</label>
-                            <div id="reveal2" class="swatch"></div>
-                            <input type="text" id="hex2" name="hex2" minlength="3" maxlength="15">
-                            <button id="button-2" type="button" class="enter" onclick="check2()">ENTER</button>
-                            <span id="ans2" class="answer"></span>
-                        </div>
-                        <br>
-                        <div id="boxHex3" class="align">
-                            <label for="hex3">#00FF00:</label>
-                            <div id="reveal3" class="swatch"></div>
-                            <input type="text" id="hex3" name="hex3" minlength="3" maxlength="15">
-                            <button id="button-3" type="button" class="enter" onclick="check3()">ENTER</button>
-                            <span id="ans3" class="answer"></span>
-                        </div>
-                        <br>
-                        <div id="boxHex4" class="align">
-                            <label for="hex4">#0000FF:</label>
-                            <div id="reveal4" class="swatch"></div>
-                            <input type="text" id="hex4" name="hex4" minlength="3" maxlength="15">
-                            <button id="button-4" type="button" class="enter" onclick="check4()">ENTER</button>
-                            <span id="ans4" class="answer"></span>
-                        </div>
-                        <br>
-                    </div>
-                </p>
-                <p><span class="color">RGB:</span> A color space relies on red, green, and blue light sources to determine the color. The first value 
-                    is the red light source, the second value is the green light source, and the third is the blue light source: 
-                    <b>rgb(<span class="red">$$$</span>, <span class="green">$$$</span>, <span class="blue">$$$</span></b>). Each  ranges between 0 and 255. 
-                    Another way of thinking of RGB is how much of the color is made up of red, green, and blue light.
-                </p>
-                <div id="RGB-generator" class="align">
-                    <label for="r">R:</label>
-                    <input class="red-gen" type="text" id="r" name="r" minlength="1" maxlength="3">
-                    <label for="g">G:</label>
-                    <input class="green-gen" type="text" id="g" name="g" minlength="1" maxlength="3">
-                    <label for="b">B:</label>
-                    <input class="blue-gen" type="text" id="b" name="b" minlength="1" maxlength="3">
-                    <button id="rgb" type="button" class="enter" onclick="generateRGB()">ENTER</button>
-                    <div id="rgb-sample" class="swatch"></div>
-                    <span id="hex-code"></span>
+        <main>
+            <nav>
+                <div class="logo-container">
+                    <a class="logo" href="index.html">P</a>
+                    <span class="title-name"></span>
                 </div>
-                <p>What do you notice when the red, green, and blue values are all the same?</p>
-                <div id="grey-box" class="align">
-                    <button id="grey-button" type="button" class="enter" onclick="showGreyAnswer()">Click for answer</button>
-                    <span id="grey-answer"></span>
-                </div>
-                <p>Besides RGB, there is also RGBA, which not only specifies the color, but also opacity. The "A" stands for "Alpha" and represents 
-                    opacity. The fourth value determines the opacity of the color and ranges between 0 and 1 as it is a percentage of the opacity. It's really 
-                    useful in some instances when you don't want certain elements to inherit opacity.
-                </p>
-                <div id="RGBA-generator" class="align">
-                    <label for="ra">R:</label>
-                    <input class="red-gen" type="text" id="ra" name="ra" minlength="1" maxlength="3">
-                    <label for="ga">G:</label>
-                    <input class="green-gen" type="text" id="ga" name="ga" minlength="1" maxlength="3">
-                    <label for="ba">B:</label>
-                    <input class="blue-gen" type="text" id="ba" name="ba" minlength="1" maxlength="3">
-                    <label for="alpha">A:</label>
-                    <input class="alpha-gen" type="text" id="alpha" name="alpha" minlength="1" maxlength="3">
-                    <button id="rgba" type="button" class="enter" onclick="generateRGBA()">ENTER</button>
-                    <div id="rgba-sample" class="swatch"></div>
-                    <span id="alpha-hex-code"></span>
-                </div>
-                <p>Can you guess the RGBA value for the keyword <span class="color italic">transparent</span>?</p>
-                    <div id="transparent-box" class="align">
-                        <button id="transparent-button" type="button" class="enter" onclick="showTransparentAnswer()">Click for answer</button>
-                        <span id="transparent-answer"></span>
-                    </div>
-                <p><span class="color">HSL:</span> A color value that is determined by <span class="highlight">hue</span>, 
-                    <span class="highlight">saturation</span>, and <span class="highlight">lightness</span>.</p>
-                    <ul>
-                        <li>Hue &ndash; a degree between 0 and 360 on the color wheel. 0 = <span class="red">red</span>, 
-                            120 = <span class="green">green</span>, and 240 = <span class="blue">blue</span>.</li>
-                        <li>Saturation &ndash; a percentage between 0% (<span class="grey">grey</span>) and 100% (the full color)</li>
-                        <li>Lightness &ndash; a percentage of brightness, where 0% = <span class="black">black</span> and 
-                            100% = <span class="white">white</span></li>
-                    </ul>
-                    <div id="HSL-generator">
-                        <div class="hsl">
-                            <div class="sections">
-                                <label for="hue">H:</label>
-                                <input type="range" id="hue" name="hue" min="0" max="360" onchange="updateHue(this.value);">
-                                <span id="hueValue" class="values">(180)</span>
+                <h1>CSS Background Property</h1>
+            </nav>
+            <article>
+                <details>
+                    <summary>What is the CSS Background Property?</summary>
+                        <p>The background property falls under the awesome category of <span class="highlight">shorthand properties</span>.</p>
+                        <p>The background property can specify up to<span class="highlight">eight background-related CSS properties</span> at once:</p>
+                        <ul>
+                            <li>background-attachement</li>
+                            <li>background-clip</li>
+                            <li>background-color</li>
+                            <li>background-image</li>
+                            <li>background-origin</li>
+                            <li>background-position</li>
+                            <li>background-repeat</li>
+                            <li>background-size</li>
+                        </ul>
+                        <p>When entering values for the background CSS property, the order does not matter, but one recommended 
+                            order is:
+                        </p>
+                        <p>[<span class="color">image</span>], 
+                            [<span class="color">position</span> / <span class="color">size</span>], 
+                            [<span class="color">repeat</span>], [<span class="color">attachment</span>], 
+                            [<span class="color">origin</span>], [<span class="color">clip</span>], 
+                            [<span class="color">color</span>]
+                        </p>
+                        <p>Regardless of the exact order, the size value always comes right after the position value 
+                            and must be separated with "/".
+                        </p>
+                        <p>Also note that not all properties need to be specified to use the shorthand property; any property 
+                            that isn't specified will be set to its default setting.
+                        </p>
+                </details>
+                <!--<details>-->
+                    <summary>So the background doesn't have to be white?</summary>
+                    <p>Thankfully no, the background doesn't have to be white if you don't want it to be.</p>
+                    <p><span class="highlight">Background-color</span> literally colors the background.</p>
+                    <p>To set the background color, you can use multiple ways to specify the color:</p>
+                    <table>
+                        <head>
+                            <tr>
+                                <th scope="col">Type</th>
+                                <th scope="col">Format</th>
+                            </tr>
+                        </head>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Keyword</th>
+                                <td>teal</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HEX</th>
+                                <td>#008080</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">RGB*</th>
+                                <td>rgb(0, 128, 128)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HSL</th>
+                                <td>hsl(180, 100%, 25%)</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">HWB</th>
+                                <td>hwb(180 0% 50%)</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th scope="row" class="footer">Color</th>
+                                <td><div class="teal"></div></td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                    <p><span class="color">Keyword:</span> Some colors are classified as <span class="highlight">named colors</span> 
+                        and thus are recoginized by a keyword. Of these named colors, some are considered standard or basic, while others 
+                        are <span class="highlight">currentcolor</span>. There is also a <span class="highlight">transparent</span> 
+                        keyword. More information can be found 
+                        <a class="link" href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">here.</a>
+                        <br>
+                        <br>
+                        Not all colors have a keyword associated with it, so it's useful to know how to use other 
+                        formats to specify color.
+                    </p>
+                    <p><span class="color">HEX:</span> A color hex code; the color is reprensented by a hexidecimal value that begins with 
+                        <span class="color">#</span> and made up of six digits whose values range between 0 and 9 and A to F. The first pair of 
+                        digits represents the amount of <span class="red">red</span> in the color, the second pair represents the amount of 
+                        <span class="green">green</span> in the color, and the last pair represents the amount of <span class="blue">blue</span> 
+                        in the color.
+                        <br>
+                        <br>
+                        As for the alphanumeric characters, 00 represents the lowest color intensity (closest to <span class="black">black</span>) 
+                        and FF represents the highest color intensity (closest to <span class="white">white</span>): 
+                        <b>#<span class="red">$$</span><span class="green">$$</span><span class="blue">$$</span></b>.
+                        <br>
+                        <br>
+                        With that in mind, what color do you think each of these HEX values are?</span>
+                        <div class="pseudo-form">
+                            <div id="boxHex0" class="align">
+                                <label for="hex0">#000000:</label>
+                                <div id="reveal0" class="swatch"></div>
+                                <input type="text" id="hex0" name="hex0" minlength="3" maxlength="15">
+                                <button id="button-0" type="button" class="enter" onclick="check0()">ENTER</button>
+                                <span id="ans0" class="answer"></span>
                             </div>
-                            <div class="sections">
-                                <label for="saturation">S:</label>
-                                <input type="range" id="saturation" name="saturation" min="0" max="100" onchange="updateSaturation(this.value);">
-                                <span id="saturationValue" class="values">(50%)</span>
+                            <br>
+                            <div id="boxHex1" class="align">
+                                <label for="hex1">#FFFFFF:</label>
+                                <div id="reveal1" class="swatch"></div>
+                                <input type="text" id="hex1" name="hex1" minlength="3" maxlength="15">
+                                <button id="button-1" type="button" class="enter" onclick="check1()">ENTER</button>
+                                <span id="ans1" class="answer"></span>
                             </div>
-                            <div class="sections">
-                                <label for="lightness">L:</label>
-                                <input type="range" id="lightness" name="lightness" min="0" max="100" onchange="updateLightness(this.value);">
-                                <span id="lightnessValue" class="values">(50%)</span>
+                            <br>
+                            <div id="boxHex2" class="align">
+                                <label for="hex2">#FF0000:</label>
+                                <div id="reveal2" class="swatch"></div>
+                                <input type="text" id="hex2" name="hex2" minlength="3" maxlength="15">
+                                <button id="button-2" type="button" class="enter" onclick="check2()">ENTER</button>
+                                <span id="ans2" class="answer"></span>
                             </div>
+                            <br>
+                            <div id="boxHex3" class="align">
+                                <label for="hex3">#00FF00:</label>
+                                <div id="reveal3" class="swatch"></div>
+                                <input type="text" id="hex3" name="hex3" minlength="3" maxlength="15">
+                                <button id="button-3" type="button" class="enter" onclick="check3()">ENTER</button>
+                                <span id="ans3" class="answer"></span>
+                            </div>
+                            <br>
+                            <div id="boxHex4" class="align">
+                                <label for="hex4">#0000FF:</label>
+                                <div id="reveal4" class="swatch"></div>
+                                <input type="text" id="hex4" name="hex4" minlength="3" maxlength="15">
+                                <button id="button-4" type="button" class="enter" onclick="check4()">ENTER</button>
+                                <span id="ans4" class="answer"></span>
+                            </div>
+                            <br>
                         </div>
-                        <div id="hsl-sample"></div>
-                        <p id="hsl-code">hsl(<span id="hue-code">180</span>, <span id="sat-code">50%</span>, <span id="lit-code">50%</span>)</p>
+                    </p>
+                    <p><span class="color">RGB:</span> A color space relies on red, green, and blue light sources to determine the color. The first value 
+                        is the red light source, the second value is the green light source, and the third is the blue light source: 
+                        <b>rgb(<span class="red">$$$</span>, <span class="green">$$$</span>, <span class="blue">$$$</span></b>). Each  ranges between 0 and 255. 
+                        Another way of thinking of RGB is how much of the color is made up of red, green, and blue light.
+                    </p>
+                    <div id="RGB-generator" class="align">
+                        <label for="r">R:</label>
+                        <input class="red-gen" type="text" id="r" name="r" minlength="1" maxlength="3">
+                        <label for="g">G:</label>
+                        <input class="green-gen" type="text" id="g" name="g" minlength="1" maxlength="3">
+                        <label for="b">B:</label>
+                        <input class="blue-gen" type="text" id="b" name="b" minlength="1" maxlength="3">
+                        <button id="rgb" type="button" class="enter" onclick="generateRGB()">ENTER</button>
+                        <div id="rgb-sample" class="swatch"></div>
+                        <span id="hex-code"></span>
                     </div>
-                <p><span class="color">HWB:</span> A color value that is determined by <span class="highlight">hue</span>, 
-                    <span class="highlight">whiteness</span>, and <span class="highlight">blackness</span>.</p>
+                    <p>What do you notice when the red, green, and blue values are all the same?</p>
+                    <div id="grey-box" class="align">
+                        <button id="grey-button" type="button" class="enter" onclick="showGreyAnswer()">Click for answer</button>
+                        <span id="grey-answer"></span>
+                    </div>
+                    <p>Besides RGB, there is also RGBA, which not only specifies the color, but also opacity. The "A" stands for "Alpha" and represents 
+                        opacity. The fourth value determines the opacity of the color and ranges between 0 and 1 as it is a percentage of the opacity. It's really 
+                        useful in some instances when you don't want certain elements to inherit opacity.
+                    </p>
+                    <div id="RGBA-generator" class="align">
+                        <label for="ra">R:</label>
+                        <input class="red-gen" type="text" id="ra" name="ra" minlength="1" maxlength="3">
+                        <label for="ga">G:</label>
+                        <input class="green-gen" type="text" id="ga" name="ga" minlength="1" maxlength="3">
+                        <label for="ba">B:</label>
+                        <input class="blue-gen" type="text" id="ba" name="ba" minlength="1" maxlength="3">
+                        <label for="alpha">A:</label>
+                        <input class="alpha-gen" type="text" id="alpha" name="alpha" minlength="1" maxlength="3">
+                        <button id="rgba" type="button" class="enter" onclick="generateRGBA()">ENTER</button>
+                        <div id="rgba-sample" class="swatch"></div>
+                        <span id="alpha-hex-code"></span>
+                    </div>
+                    <p>Can you guess the RGBA value for the keyword <span class="color italic">transparent</span>?</p>
+                        <div id="transparent-box" class="align">
+                            <button id="transparent-button" type="button" class="enter" onclick="showTransparentAnswer()">Click for answer</button>
+                            <span id="transparent-answer"></span>
+                        </div>
+                    <p><span class="color">HSL:</span> A color value that is determined by <span class="highlight">hue</span>, 
+                        <span class="highlight">saturation</span>, and <span class="highlight">lightness</span>.</p>
+                        <ul>
+                            <li>Hue &ndash; a degree between 0 and 360 on the color wheel. 0 = <span class="red">red</span>, 
+                                120 = <span class="green">green</span>, and 240 = <span class="blue">blue</span>.</li>
+                            <li>Saturation &ndash; a percentage between 0% (<span class="grey">grey</span>) and 100% (the full color)</li>
+                            <li>Lightness &ndash; a percentage of brightness, where 0% = <span class="black">black</span> and 
+                                100% = <span class="white">white</span></li>
+                        </ul>
+                        <div id="HSL-generator">
+                            <div class="hsl">
+                                <div class="sections">
+                                    <label for="hue">H:</label>
+                                    <input type="range" id="hue" name="hue" min="0" max="360" onchange="updateHue(this.value);">
+                                    <span id="hueValue" class="values">(180)</span>
+                                </div>
+                                <div class="sections">
+                                    <label for="saturation">S:</label>
+                                    <input type="range" id="saturation" name="saturation" min="0" max="100" onchange="updateSaturation(this.value);">
+                                    <span id="saturationValue" class="values">(50%)</span>
+                                </div>
+                                <div class="sections">
+                                    <label for="lightness">L:</label>
+                                    <input type="range" id="lightness" name="lightness" min="0" max="100" onchange="updateLightness(this.value);">
+                                    <span id="lightnessValue" class="values">(50%)</span>
+                                </div>
+                            </div>
+                            <div id="hsl-sample"></div>
+                            <p id="hsl-code">hsl(<span id="hue-code">180</span>, <span id="sat-code">50%</span>, <span id="lit-code">50%</span>)</p>
+                        </div>
+                    <p><span class="color">HWB:</span> A color value that is determined by <span class="highlight">hue</span>, 
+                        <span class="highlight">whiteness</span>, and <span class="highlight">blackness</span>.</p>
+                        <ul>
+                            <li>Hue &ndash; same as in HSL</li>
+                            <li>Whiteness &ndash; a percentage between 0% (the full color) and 100% (<span class="white">white</span>).</li>
+                            <li>Blackness &ndash; a percentage between 0% (the full color) and 100% (<span class="black">black</span>).</li>
+                        </ul>
+                <!--</details>-->
+                <details>
+                    <summary>What are the background default settings?</summary>
+                    <table>
+                        <head>
+                            <tr>
+                                <th>Background Property</th>
+                                <th>Default Value</th>
+                            </tr>
+                        </head>
+                        <tbody>
+                            <tr>
+                                <td>background-image</td>
+                                <td>none</td>
+                            </tr>
+                            <tr>
+                                <td>background-position</td>
+                                <td>0% 0%</td>
+                            </tr>
+                            <tr>
+                                <td>background-size</td>
+                                <td>auto</td>
+                            </tr>
+                            <tr>
+                                <td>background-repeat</td>
+                                <td>repeat</td>
+                            </tr>
+                            <tr>
+                                <td>background-attachment</td>
+                                <td>scroll</td>
+                            </tr>
+                            <tr>
+                                <td>background-origin</td>
+                                <td>padding-box</td>
+                            </tr>
+                            <tr>
+                                <td>background-clip</td>
+                                <td>border-box</td>
+                            </tr>
+                            <tr>
+                                <td>background-color</td>
+                                <td>transparent</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>In other words, specifiying:</p>
                     <ul>
-                        <li>Hue &ndash; same as in HSL</li>
-                        <li>Whiteness &ndash; a percentage between 0% (the full color) and 100% (<span class="white">white</span>).</li>
-                        <li>Blackness &ndash; a percentage between 0% (the full color) and 100% (<span class="black">black</span>).</li>
+                        <li>"<span class="color">background: none</span>",</li>
+                        <li>"<span class="color">background: transparent</span>", and</li>
+                        <li>"<span class="color">background: repeat scroll 0% 0% / auto padding-box border-box none transparent</span>"</li>
                     </ul>
-            <!--</details>-->
-            <details>
-                <summary>What are the background default settings?</summary>
-                <table>
-                    <head>
-                        <tr>
-                            <th>Background Property</th>
-                            <th>Default Value</th>
-                        </tr>
-                    </head>
-                    <tbody>
-                        <tr>
-                            <td>background-image</td>
-                            <td>none</td>
-                        </tr>
-                        <tr>
-                            <td>background-position</td>
-                            <td>0% 0%</td>
-                        </tr>
-                        <tr>
-                            <td>background-size</td>
-                            <td>auto</td>
-                        </tr>
-                        <tr>
-                            <td>background-repeat</td>
-                            <td>repeat</td>
-                        </tr>
-                        <tr>
-                            <td>background-attachment</td>
-                            <td>scroll</td>
-                        </tr>
-                        <tr>
-                            <td>background-origin</td>
-                            <td>padding-box</td>
-                        </tr>
-                        <tr>
-                            <td>background-clip</td>
-                            <td>border-box</td>
-                        </tr>
-                        <tr>
-                            <td>background-color</td>
-                            <td>transparent</td>
-                        </tr>
-                    </tbody>
-                </table>
-                <p>In other words, specifiying:</p>
-                <ul>
-                    <li>"<span class="color">background: none</span>",</li>
-                    <li>"<span class="color">background: transparent</span>", and</li>
-                    <li>"<span class="color">background: repeat scroll 0% 0% / auto padding-box border-box none transparent</span>"</li>
-                </ul>
-                <p>all do the same thing and all are just the default setting.</p>
-            </details>
-            <details>
-                <summary>The background is made of layers?</summary>
-                <p>One of the coolest things about <span class="highlight">all background-related CSS properties</span> is 
-                    that they can <span class="highlight">specify multiple background layers</span>. Each background-related 
-                    property essentially represents a layer, but can be more than just one layer. These layers lay ontop of 
-                    each other to determine how the background ultimately displays on screen.
-                </p>
-                <p>When a background-related CSS property is made up of multiple layers, each layer is represented by a 
-                    value that is separated from the other values by a comma. The first value in this list is the top layer. 
-                    Regardless of how many layers there are, if color is specified, it will always be the last layer of the 
-                    background.
-                </p>
-            </details>
-            <details>
-                <summary>Can the background be an image?</summary>
-                <p><span class="color">Background-image</span> in particular can <span class="highlight">use more than one 
-                    image</span>.
-                </p>
-                <p>In fact, a "background image" doesn't have to be a picture (i.e. png, jpeg, svg files) at all; a background 
-                    image can be a gradient (More on that later).
-                </p>
-                <p>When using actual pictures as background images, the file name of the picture has to be encapsulated within 
-                    an url(). Without the url(), the computer won't know where to find the image. 
-                </p>
-                <div class="code-box">
-                    body {<br>
-                        <span class="shift1">background-image: <span class="color">url(image.png)</span>;</span>
-                    }
-                </div>
-                <p>This method requires an HTTP request, which might make the web page load slower. If that's an issue, a 
-                    data URI can be used instead because it saves HTTP Requests. The data URI replaces the image file, so you 
-                    still need to remember to encapsulate the data URI within the url(). You can use online conversion tools 
-                    to get a data URI for your pictures.
-                </p>
-                <p>Multiple background images are separated by commas. If using actual pictures, each picture has its own url(), 
-                    and each url() is separated by commas.
-                </p>
-                <div class="code-box">
-                    body {<br>
-                        <span class="shift1">background-image: <span class="color">url(image1.png)</span>, <span class="color">url(image2.png)</span>;</span>
-                    }
-                </div>
-                <p>If using gradients, the type of gradient must be specified.</p>
-                <p>There are six types of gradients to choose from:</p>
-                <ul>
-                    <li><a class="link" href="Conic_Gradients.html">conic-gradient()</a></li>
-                    <li><a class="link" href="Linear_Gradients.html">linear-gradient()</a></li>
-                    <li><a class="link" href="Radial_Gradients.html">radial-gradient()</a></li>
-                    <li><a class="link" href="Conic_Gradients.html">repeating-conic-gradient()</a></li>
-                    <li><a class="link" href="Linear_Gradients.html">repeating-linear-gradient()</a></li>
-                    <li><a class="link" href="Radial_Gradients.html">repeating-radial-gradient()</a></li>
-                </ul>
-            </details>
-            <details>
-                <summary>Can the background position change?</summary>
-                <p><span class="highlight">Background-position</span> dictates where the background images are displayed 
-                    on screen.
-                </p>
-                <p>Often it is expressed as a percentage; the size of the background positioning area minus the size of 
-                    the background image. The s
-                </p>
-            </details>
-            <details>
-                <summary>Can the background change size?</summary>
-                <p><span class="highlight">Background-size</span> controls the background images' sizes.</p>
-            </details>
-            <details>
-                <summary>Can you repeat an image or pattern to use as a background?</summary>
-                <p><span class="highlight">Background-repeat</span> specifies how to repeat background images.</p>
-                <p>By default, the background image is repeated from left to right, top to bottom.</p>
-            </details>
-            <details>
-                <summary>Can the background "move"?</summary>
-                <p><span class="highlight">Background-attachment</span> is similar to background-position, except instead 
-                    of determining the background's image's exact location, it determines whether the image is fixed to 
-                    where it's positioned, or if it scrolls along with the rest of the page when the user reads down the 
-                    web page.
-                </p>
-            </details>
-            <details>
-                <summary>What is a positioning area?</summary>
-                <p><span class="highlight">Background-origin</span> is another property related to position. It decides the 
-                positioning area of the background image(s).
-            </p>
-            </details>
-            <details>
-                <summary>What is a painting area?</summary>
-                <p><span class="highlight">Background-clip</span> specifies the painting area of the background image.</p>
-            </details>
-        </article>
-        <button type="button" class="return" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
-        <section id="copyright">Copyright &#169 2023</section>
+                    <p>all do the same thing and all are just the default setting.</p>
+                </details>
+                <details>
+                    <summary>The background is made of layers?</summary>
+                    <p>One of the coolest things about <span class="highlight">all background-related CSS properties</span> is 
+                        that they can <span class="highlight">specify multiple background layers</span>. Each background-related 
+                        property essentially represents a layer, but can be more than just one layer. These layers lay ontop of 
+                        each other to determine how the background ultimately displays on screen.
+                    </p>
+                    <p>When a background-related CSS property is made up of multiple layers, each layer is represented by a 
+                        value that is separated from the other values by a comma. The first value in this list is the top layer. 
+                        Regardless of how many layers there are, if color is specified, it will always be the last layer of the 
+                        background.
+                    </p>
+                </details>
+                <details>
+                    <summary>Can the background be an image?</summary>
+                    <p><span class="color">Background-image</span> in particular can <span class="highlight">use more than one 
+                        image</span>.
+                    </p>
+                    <p>In fact, a "background image" doesn't have to be a picture (i.e. png, jpeg, svg files) at all; a background 
+                        image can be a gradient (More on that later).
+                    </p>
+                    <p>When using actual pictures as background images, the file name of the picture has to be encapsulated within 
+                        an url(). Without the url(), the computer won't know where to find the image. 
+                    </p>
+                    <div class="code-box">
+                        body {<br>
+                            <span class="shift1">background-image: <span class="color">url(image.png)</span>;</span>
+                        }
+                    </div>
+                    <p>This method requires an HTTP request, which might make the web page load slower. If that's an issue, a 
+                        data URI can be used instead because it saves HTTP Requests. The data URI replaces the image file, so you 
+                        still need to remember to encapsulate the data URI within the url(). You can use online conversion tools 
+                        to get a data URI for your pictures.
+                    </p>
+                    <p>Multiple background images are separated by commas. If using actual pictures, each picture has its own url(), 
+                        and each url() is separated by commas.
+                    </p>
+                    <div class="code-box">
+                        body {<br>
+                            <span class="shift1">background-image: <span class="color">url(image1.png)</span>, <span class="color">url(image2.png)</span>;</span>
+                        }
+                    </div>
+                    <p>If using gradients, the type of gradient must be specified.</p>
+                    <p>There are six types of gradients to choose from:</p>
+                    <ul>
+                        <li><a class="link" href="Conic_Gradients.html">conic-gradient()</a></li>
+                        <li><a class="link" href="Linear_Gradients.html">linear-gradient()</a></li>
+                        <li><a class="link" href="Radial_Gradients.html">radial-gradient()</a></li>
+                        <li><a class="link" href="Conic_Gradients.html">repeating-conic-gradient()</a></li>
+                        <li><a class="link" href="Linear_Gradients.html">repeating-linear-gradient()</a></li>
+                        <li><a class="link" href="Radial_Gradients.html">repeating-radial-gradient()</a></li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Can the background position change?</summary>
+                    <p><span class="highlight">Background-position</span> dictates where the background images are displayed 
+                        on screen.
+                    </p>
+                    <p>Often it is expressed as a percentage; the size of the background positioning area minus the size of 
+                        the background image. The s
+                    </p>
+                </details>
+                <details>
+                    <summary>Can the background change size?</summary>
+                    <p><span class="highlight">Background-size</span> controls the background images' sizes.</p>
+                    <p>You can use the original size, stretch the image, or constrain it to fit inside the element.</p>
+                    <p>Values:</p>
+                    <ul>
+                        <li><b>contain:</b> enlarges or shrinks the image to fit the size of the element without cropping or stretch so that the orginal ratio is maintained. If there is left over space, the image will repeat to fill the remaining space, unless specified.</li>
+                        <li><b>cover:</b> scales and preserves the image to the smallest allowable size to fit the element's size and eliminates empty space by cropping the image to fit.</li>
+                        <li><b>auto:</b> maintains the background image's original size.</li>
+                        <li><b>percentages/lengths:</b> determines the background image's dimensions with specific lengths (absolute or relative units) or percentages. Cannot use negative values.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Can you repeat an image or pattern to use as a background?</summary>
+                    <p><span class="highlight">Background-repeat</span> specifies how to repeat background images.</p>
+                    <p>By default, the background image is repeated from left to right, top to bottom.</p>
+                    <p>Setting the property to "no-repeat" will stop the image from repeating.</p>
+                </details>
+                <details>
+                    <summary>Can the background "move"?</summary>
+                    <p><span class="highlight">Background-attachment</span> is similar to background-position, except instead 
+                        of determining the background's image's exact location, it determines whether the image is fixed to 
+                        where it's positioned, or if it scrolls along with the rest of the page when the user reads down the 
+                        web page.
+                    </p>
+                    <p>Values:</p>
+                    <ul>
+                        <li><span class="color">fixed:</span> fixes the background image relative to the viewport. When you scroll, the background image stays in it's original position such that you see other areas of the background that was not previously visible.</li>
+                        <li><span class="color">local:</span> fixes the background image relative to the element's contents such that when you scroll, the background image moves with the viewport as if it were the background of the visible content.</li>
+                        <li><span class="color">scroll:</span> fixes the background image relative to the element, attaching to the element's border.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>What is a positioning area?</summary>
+                    <p><span class="highlight">Background-origin</span> is another property related to position. It decides the 
+                    positioning area of the background image(s).
+                    </p>
+                    <p>Values:</p>
+                    <ul>
+                        <li><span class="color">center</span></li>
+                        <li><span class="color">top:</span> Specifies the top edge to position the image. The other three dimensions are set to 50% so the image is centered relative to the edge.</li>
+                        <li><span class="color">left:</span> Specifies the left edge to position the image. The other three dimensions are set to 50% so the image is centered relative to the edge.</li>
+                        <li><span class="color">right:</span> Specifies the right edge to position the image. The other three dimensions are set to 50% so the image is centered relative to the edge.</li>
+                        <li><span class="color">bottom:</span> Specifies the bottom edge to position the image. The other three dimensions are set to 50% so the image is centered relative to the edge.</li>
+                        <li><span class="color">percentages/length:</span> Specifies horizontally relative to the left edge, while vertically aligned center.</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>What is a painting area?</summary>
+                    <p>The painting area refers to how much of the element is covered by the background in regards to the element's border and even it's padding.</p>
+                    <p><span class="highlight">Background-clip</span> specifies the painting area of the background image.</p>
+                    <p>Value:</p>
+                    <ul>
+                        <li><span class="color">border-box:</span> The background extends to the outer edge of the element's border. If the border is transparent, the background covers that space.</li>
+                        <li><span class="color">padding-box:</span> The background only extends to the inner edge of the element's border. If the border is transparent, that space is not covered by the background.</li>
+                        <li><span class="color">content-box:</span> The background only covers the area occupied by the element's content. If the element's padding is defined, the background will not cover the padding.</li>
+                        <li><span class="color">text:</span> The background basically sticks only to the text within the element, such that the text appears to have an outline made out of the background (the background is clipped to the foregroun text).</li>
+                    </ul>
+                </details>
+            </article>
+            <button type="button" class="return" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
+        </main>
+        <footer>Copyright &#169 2023</footer>
     </body>
 </html>

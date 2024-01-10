@@ -1,6 +1,6 @@
-/* The Programming Polyglot Homepage Style Sheet */
+/* The Programming Polyglot Web Page Style Sheet */
 
-@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 * {
@@ -14,7 +14,7 @@ html {
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-body, nav, .logo-container, #languages {
+body, nav, .logo-container, .code-box, .psuedo-form, .align, #HSL-generator, .hsl, .sections {
     display: flex;
 }
 
@@ -22,11 +22,7 @@ html, body {
     height: 100%;
 }
 
-nav, footer {
-    background-color: rgb(0, 179, 179);
-}
-
-.logo-container, h1, h2, .intro, button, footer {
+.logo-container, h1, summary {
     font-family: 'Ubuntu';
 }
 
@@ -36,20 +32,23 @@ body {
 }
 
 main {
+    width: 100%;
     flex: 1 0 auto;
-    background-color: rgb(227, 255, 255);
+    background-image: linear-gradient(to bottom, rgb(0, 121, 121), cyan);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 nav {
-    height: 15vh;
-    box-shadow: 0 0.75vmin 10px rgb(0, 88, 88);
+    background-color: teal;
+    height: 25vh;
+    box-shadow: 0 2vmin 10px rgb(0, 88, 88);
     color: rgb(0, 41, 41);
     font-weight: bold;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    margin-top: 1vmax;
     padding: 0 2vmax;
 }
 
@@ -92,105 +91,103 @@ nav {
     color:rgb(195, 240, 240);
 }
 
-article {
-    background-color: rgba(255, 255, 255, 0.75);
-    margin: 1.5vmax;
-    border-radius: 5px;
-    box-shadow: 0 0.25vmin 10px rgb(0, 121, 121);
-}
-
 h1 {
-    font-size: 3.5vmax;
+    font-size: 4vmax;
 }
 
-h2 {
-    color: darkcyan;
-    font-size: 4vmax;
-    text-align: center;
-    margin-top: 1vmax;
+article {
+    flex: 1;
+    margin: 1.5vmax;
+    padding: 3vmax;
+}
+
+details {
+    margin: 2vmax 0;
+}
+
+summary {
+    color: white;
+    padding: 1vmin;
+}
+
+summary:hover {
+    text-decoration: 0.5vmin dotted underline;
+    background-color: rgba(102, 248, 248, 0.39);
+    border-radius: 10px;
+    box-shadow: inset 1vmin 1vmin 2vmin teal, inset -1vmin -1vmin 2vmin teal, inset 1vmin -1vmin 2vmin teal, inset -1vmin 1vmin 2vmin teal;
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+p, ul, #grey-answer, #transparent-answer {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+}
+
+p {
+    padding-left: 2rem;
+}
+
+ol {
+    color:rgb(1, 102, 102);
+}
+
+ul {
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+
+}
+
+li {
     margin-bottom: 1vmax;
 }
 
-h2, .intro {
-    padding: 1vmin;
-    margin-left: 5vmin;
-    margin-right: 5vmin;
+.link {
+    color: cyan;
 }
 
-#languages {
-    flex-direction: row;
-    gap: 10vmin;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 2vmax;
+.link:hover {
+    color: white;
+    text-decoration: dotted underline;
 }
-button {
-    padding: 3vmin;
+
+.return {
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 1rem;
-    border-radius: 10px;
-    background-color: rgb(162, 238, 238);
+    font-style: italic;
+    margin-top: 0;
+    margin: 4vmax;
+    background-color:rgb(129, 248, 248);
+    color: rgb(0, 41, 41);
+    border-radius: 50px;
     border-width: 2px;
     border-style: solid;
-    border-top-color: rgb(162, 238, 238);
-    border-left-color: rgb(162, 238, 238);
-    border-right-color: darkcyan;
-    border-bottom-color: darkcyan;
+    border-left-color:rgb(129, 248, 248);
+    border-top-color:rgb(129, 248, 248);
+    border-right-color:rgb(0, 173, 173);
+    border-bottom-color:rgb(0, 173, 173);
+    padding: 1vmin;
 }
 
-button:hover {
+.return:hover {
     background-image: radial-gradient(cyan, rgb(0, 121, 121)) ;
-    color: white;
-    border-top-color: teal;
-    border-left-color: teal;
+    color:white;
+    font-style: normal;
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: rgb(0, 41, 41);
+    border-left-color: rgb(0, 41, 41);
     border-right-color: rgb(0, 41, 41);
     border-bottom-color: rgb(0, 41, 41);
 }
 
 footer {
-    flex-shrink: 0;
+    background-color: teal;
     color: white;
     font-style: italic;
-    font-size: 0.5rem;
+    font-size: 3vmin;
     width: 100%;
     text-align: center;
     padding: 1vmin;
-}
-
-.note {
-    font-style: italic;
-    font-size: 0.5rem;
-    text-align: center;
-}
-
-.script {
-    font-family: 'Dancing Script';
-    text-align: left;
-    font-weight: lighter;
-}
-
-.intro {
-    font-size: 0.75rem;
-    color:rgb(0, 41, 41);
-}
-
-@media (max-width: 700px) {
-    nav {
-        padding-top: 1.5vmax;
-        padding-bottom: 3vmax;
-        margin-top: 0;
-        margin-bottom: 3vmax;
-    }
-    article {
-        padding: 1vmax;
-    }
-    p {
-        text-align: center;
-    }
-    h1 {
-        text-align: right;
-    }
-    h2 {
-        font-size: 5vmax
-    }
 }

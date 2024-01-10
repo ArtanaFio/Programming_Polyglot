@@ -1,7 +1,11 @@
-/* The Programming Polyglot Web Page Style Sheet */
+
+/* Imported fonts */
 
 @import url('https://fonts.googleapis.com/css2?family=Sometype+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+/*------------------------------------------------------------------------------------------------*/
 
+/* General Document Styling */
 
 * {
     box-sizing: border-box;
@@ -13,36 +17,52 @@ html {
     font-size: 25pt;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+/*------------------------------------------------------------------------------------------------*/
 
-body {
-    background-image: linear-gradient(to bottom, teal, rgb(0, 221, 221));
-    background-repeat: no-repeat;
-    background-size: cover;
+/* Document Layout Styling */
+
+body, nav, .logo-container, .code-box, .psuedo-form, .align, #HSL-generator, .hsl, .sections {
     display: flex;
-    flex-direction: column;
-    color:rgb(0, 88, 88);
 }
 
-#top-bar {
-    background-color: teal;
+html, body {
+    height: 100%;
+}
+
+.logo-container, h1, summary {
+    font-family: 'Ubuntu';
+}
+
+body {
+    flex-direction: column;
+    align-items: center;
+}
+
+main {
     width: 100%;
-    height: 10vmax;
-    box-shadow: 0 3vmin 10px rgb(0, 88, 88);
+    flex: 1 0 auto;
+    background-image: linear-gradient(to bottom, rgb(0, 121, 121), cyan);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+nav {
+    background-color: teal;
+    height: 25vh;
+    box-shadow: 0 2vmin 10px rgb(0, 88, 88);
     color: rgb(0, 41, 41);
     font-weight: bold;
-    display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding-right: 10vmax;
+    padding: 0 2vmax;
 }
 
 .logo-container {
-    display: flex;
     flex-direction: row;
     align-items: flex-end;
-    gap: 5px;
+    gap: 1vmin;
 }
 
 .logo {
@@ -56,7 +76,6 @@ body {
     border-bottom-color: black;
     border-left-color: rgb(195, 240, 240);
     border-top-color: rgb(195, 240, 240);
-    margin-left: 2vmax;
     color:rgb(0, 41, 41);
     text-decoration: none;
     text-align: center;
@@ -79,13 +98,40 @@ body {
     color:rgb(195, 240, 240);
 }
 
-h1 {
-    font-size: 4vmax;
-}
-
 article {
     flex: 1;
+    margin: 1.5vmax;
     padding: 3vmax;
+}
+
+#topic-content {
+    display: flex;
+    flex-direction: row;
+}
+
+aside {
+    border: 5px dotted teal;
+}
+
+section {
+    background-color:rgb(195, 240, 240);
+}
+
+footer {
+    background-color: teal;
+    color: white;
+    font-style: italic;
+    font-size: 3vmin;
+    width: 100%;
+    text-align: center;
+    padding: 1vmin;
+}
+/*------------------------------------------------------------------------------------------------*/
+
+/* Document Element Styling */
+
+h1 {
+    font-size: 4vmax;
 }
 
 details {
@@ -97,7 +143,7 @@ summary {
     padding: 1vmin;
 }
 
-summary:hover {
+summary:hover, aside >  {
     text-decoration: 0.5vmin dotted underline;
     background-color: rgba(102, 248, 248, 0.39);
     border-radius: 10px;
@@ -125,24 +171,116 @@ li {
     margin-bottom: 1vmax;
 }
 
+.return {
+    width: -moz-fit-content;
+    width: fit-content;
+    font-size: 1rem;
+    font-style: italic;
+    margin-top: 0;
+    margin: 4vmax;
+    background-color:rgb(129, 248, 248);
+    color: rgb(0, 41, 41);
+    border-radius: 50px;
+    border-width: 2px;
+    border-style: solid;
+    border-left-color:rgb(129, 248, 248);
+    border-top-color:rgb(129, 248, 248);
+    border-right-color:rgb(0, 173, 173);
+    border-bottom-color:rgb(0, 173, 173);
+    padding: 1vmin;
+}
+
+.return:hover {
+    background-image: radial-gradient(cyan, rgb(0, 121, 121)) ;
+    color:white;
+    font-style: normal;
+    border-width: 2px;
+    border-style: solid;
+    border-top-color: rgb(0, 41, 41);
+    border-left-color: rgb(0, 41, 41);
+    border-right-color: rgb(0, 41, 41);
+    border-bottom-color: rgb(0, 41, 41);
+}
+/*------------------------------------------------------------------------------------------------*/
+/* Note Styling */
 b, i, .reveal-answers {
     background-color: rgba(0, 255, 255, 0.452);
     padding: 5px;
     border-radius: 5px;
 }
 
-.color,
-.link {
+.color {
     color: cyan;
-}
-
-.link:hover {
-    color: white;
-    text-decoration: dotted underline;
 }
 
 strong {
     text-decoration: underline;
+}
+
+.left {
+    text-align: left;
+}
+
+.highlight {
+    margin: 0 0.2rem;
+    background-color: rgba(0, 255, 255, 0.425);
+    box-shadow: -2px 2px 10px rgba(0, 255, 255, 0.425), -2px -2px 10px rgba(0, 255, 255, 0.425), 2px 2px 10px rgba(0, 255, 255, 0.425), 2px -2px 10px rgba(0, 255, 255, 0.425);
+}
+
+.italic {
+    font-style: italic;
+}
+
+.red, .green, .blue, .black {
+    padding: 1px;
+    margin: 0 0.2rem;
+    background-color: rgba(255, 255, 255, 0.500);
+    box-shadow: -2px 2px 10px rgba(255, 255, 255, 0.500), -2px -2px 10px rgba(255, 255, 255, 0.500), 2px 2px 10px rgba(255, 255, 255, 0.500), 2px -2px 10px rgba(255, 255, 255, 0.500);
+}
+
+.red {
+    color: red;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+.white {
+    color: white;
+}
+
+.black {
+    color: black;
+}
+/*------------------------------------------------------------------------------------------------*/
+/* Code Styling */
+
+.code-box {
+    flex-direction: column;
+    margin-left: 10vmin;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    box-shadow:inset -3px -2px 4px darkcyan;
+    font-size: 0.75rem;
+}
+
+.shift1 {
+    padding-left: 1rem;
+}
+
+.shift2 {
+    padding-left: 2rem;
+}
+
+.shift3 {
+    padding-left: 3rem;
 }
 
 .coding {
@@ -157,10 +295,6 @@ strong {
 
 .unique2 {
     background-color: rgba(0, 255, 255, 0.25);
-}
-
-.left {
-    text-align: left;
 }
 
 .type {
@@ -183,39 +317,23 @@ strong {
     color: darkcyan;
 }
 
-.return {
-    width: -moz-fit-content;
-    width: fit-content;
-    font-size: 1rem;
-    font-style: italic;
-    margin-top: 0;
-    margin: 4vmax;
-    background-color:rgb(129, 248, 248);
-    color: rgb(0, 41, 41);
-    border-radius: 20px;
-    border-width: 5px;
-    border-style: solid;
-    border-left-color:rgb(0, 41, 41);
-    border-top-color:rgb(0, 41, 41);
-    border-right-color:rgb(0, 88, 88);
-    border-bottom-color:rgb(0, 88, 88);
+[href="#this-link"] {
+    color: blue;
+}
+[href="#this-link"]:hover {
+    color: darkseagreen;
 }
 
-.return:hover {
-    background-color: teal;
-    color:white;
-    font-style: normal;
-}
-
-#copyright {
-    background-color: teal;
+[href="#this-link"]:active {
     color: white;
-    font-style: italic;
-    font-size: 3vmin;
-    width: 100%;
-    text-align: center;
-    padding: 1vmin;
 }
+
+[href="#this-link"]:focus {
+    background-color: cyan;
+}
+/*------------------------------------------------------------------------------------------------*/
+
+/* Table Styling */
 
 table {
     border-collapse: collapse;
@@ -269,30 +387,6 @@ caption {
     padding: 0.6rem 3.5rem;
 }
 
-.code-box {
-    display: flex;
-    flex-direction: column;
-    margin-left: 10vmin;
-    width: -moz-fit-content;
-    width: fit-content;
-    padding: 0.5rem 1.5rem;
-    background-color: white;
-    box-shadow:inset -3px -2px 4px darkcyan;
-    font-size: 0.75rem;
-}
-
-.shift1 {
-    padding-left: 1rem;
-}
-
-.shift2 {
-    padding-left: 2rem;
-}
-
-.shift3 {
-    padding-left: 3rem;
-}
-
 .resource {
     color: rgb(0, 88, 88);
 }
@@ -313,52 +407,17 @@ caption {
     font-size: 0.35rem;
 }
 
-.highlight {
-    margin: 0 0.2rem;
-    background-color: rgba(0, 255, 255, 0.425);
-    box-shadow: -2px 2px 10px rgba(0, 255, 255, 0.425), -2px -2px 10px rgba(0, 255, 255, 0.425), 2px 2px 10px rgba(0, 255, 255, 0.425), 2px -2px 10px rgba(0, 255, 255, 0.425);
-}
+/*------------------------------------------------------------------------------------------------*/
 
-.italic {
-    font-style: italic;
-}
-
-.red, .green, .blue, .black {
-    padding: 1px;
-    margin: 0 0.2rem;
-    background-color: rgba(255, 255, 255, 0.500);
-    box-shadow: -2px 2px 10px rgba(255, 255, 255, 0.500), -2px -2px 10px rgba(255, 255, 255, 0.500), 2px 2px 10px rgba(255, 255, 255, 0.500), 2px -2px 10px rgba(255, 255, 255, 0.500);
-}
-
-.red {
-    color: red;
-}
-
-.green {
-    color: green;
-}
-
-.blue {
-    color: blue;
-}
-
-.white {
-    color: white;
-}
-
-.black {
-    color: black;
-}
+/* Form Styling */
 
 .psuedo-form {
-    display: flex;
     flex-direction: column;
     align-items: flex-end;
     width: 30%;
 }
 
 .align {
-    display: flex;
     gap: 0.5rem;
     align-items: flex-end;
 }
@@ -427,19 +486,13 @@ input[type="text"] {
 }
 
 #HSL-generator {
-    display: flex;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
 }
 
 .hsl {
-    display: flex;
     gap: 1rem;
-}
-
-.sections {
-    display: flex;
 }
 
 .values {
@@ -452,6 +505,7 @@ input[type="text"] {
 
 input[type="range"] {
     -webkit-appearance: none;
+    appearance: none;
     width: 4.5rem;
     background: transparent;
 }
@@ -492,29 +546,4 @@ input[type="range"]::-webkit-slider-runnable-track {
     height: 3rem;
     border: 3px solid white;
     background-color: hsl(180, 50%, 50%);
-}
-
-.transparent {
-    color: transparent;
-    background-color: transparent;
-}
-
-.transparent:hover {
-    background-color: transparent;
-    box-shadow: none;
-}
-
-[href="#this-link"] {
-    color: blue;
-}
-[href="#this-link"]:hover {
-    color: darkseagreen;
-}
-
-[href="#this-link"]:active {
-    color: white;
-}
-
-[href="#this-link"]:focus {
-    background-color: cyan;
 }
