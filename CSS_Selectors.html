@@ -8,72 +8,84 @@
     </head>
     <body>
         <main>
-            <nav>
+            <nav id="top">
                 <div class="logo-container">
                     <a class="logo" href="index.html">P</a>
                     <span class="title-name"></span>
                 </div>
-                <h1>CSS Selectors</h1>
+                <div>
+                    <h1>CSS Selectors</h1>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="HTML_list.html">HTML</a></li>
+                        <li><a href="CSS_list.html">CSS</a></li>
+                        <li><a href="index.html">JS</a></li>
+                    </ul>
+                </div>
             </nav>
             <article>
                 <aside>
-
+                    <div>
+                        <ul>
+                            <li><a href="#topic-1">CSS Selectors Types</a></li>
+                            <li><a href="#topic-2">Common Selectors</a></li>
+                            <li><a href="#topic-3">Child Selectors</a></li>
+                            <li><a href="#topic-4">Sibling Selectors</a></li>
+                            <li><a href="#topic-5">Attribute Selectors</a></li>
+                            <li><a href="#topic-6">Pseudo-classes</a></li>
+                            <li><a href="#topic-7">Pseudo-elements</a></li>
+                        </ul>
+                        <button type="button" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
+                    </div>
                 </aside>
                 <section>
-                    <details>
-                        <summary>What are CSS selectors?</summary>
-                        <p>CSS selectors act as a sort of <strong>label for identifying specific HTML elements</strong> to apply style to them. There are different
-                            types of CSS.
-                        </p>
-                    </details>
-                    <details>
-                        <summary>What are the different kinds of CSS selectors?</summary>
-                        <p>There are <span class="color">common selectors</span> that select elements based on their type, class, and ID.</p>
-                        <p>Relatiionships between HTML elements are used by<span class="color">child selectors</span> and <span class="color">sibling selectors</span> to select HTML elements.</p>
-                        <p><span class="color">Attribute selectors</span> target HTML elements that have a specific attribute or value.</p>
-                    </details>
-                    <details>
-                        <summary>What are the common selectors?</summary>
-                        <p>Common selectors are the most often used because they are the simplest to understand and apply.</p>
-                        <ul>
-                            <li><span class="color">Type selector</span> targets an element by it's tag name.</li>
-                            <li><span class="color">Class selector</span> assigns a class attribute to the element and is denoted by ".class-name". Classes are useful when you want to apply the same style to multiple HTML elements and when you want to apply more than one set of styles to an element.</li>
-                            <li><span class="color">ID selector</span>assigns an ID attribute to the element and is denoted by "#ID-name". IDs are best used for elements that have very unique styles that are specific to that one HTML element because you can only define one Id for each element and cannot reuse that ID's name.</li>
-                        </ul>
-                        <table>
-                            <tr>
-                                <th>Common Selector</th>
-                                <th>HTML</th>
-                                <th>CSS</th>
-                            </tr>
-                            <tr>
-                                <td>Type</td>
-                                <td class="coding">
-                                    &lt;h1&gt;
-                                </td>
-                                <td class="coding left"><span class="type">h1</span> {<br>
-                                    <span class="shift1">font-size: 5rem;</span><br>}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>Class</td>
-                                <td class="coding">&lt;p <span class="attr">class</span>=<span class="value">"color"</span>&gt;</td>
-                                <td class="coding left"><span class="class">.color</span> {<br>
-                                    <span class="shift1">color: 'cyan';</span><br>}
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>ID</td>
-                                <td class="coding">&lt;p <span class="attr">id</span>=<span class="value">"first-line"</span>&gt;</td>
-                                <td class="coding left"><span class="id">#first-line</span> {<br>
-                                    <span class="shift1">font-weight: bold;</span><br>}
-                                </td>
-                            </tr>
-                        </table>
-                    </details>
-                    <details>
-                        <summary>What are child selectors?</summary>
-                        <p>This is one of the selector types that target elements based on their relationship to other elements, specifically the parent-child relationship.</p>
+                    <p>CSS selectors act as a sort of <strong>label for identifying specific HTML elements</strong> to apply style to them. There are different
+                        types of CSS.
+                    </p>
+                    <h2 id="topic-1">What are the different kinds of CSS selectors?</h2>
+                    <p>There are <span class="color">common selectors</span> that select elements based on their type, class, and ID.</p>
+                    <p>Relatiionships between HTML elements are used by <span class="color">child selectors</span> and <span class="color">sibling selectors</span> to select HTML elements.</p>
+                    <p><span class="color">Attribute selectors</span> target HTML elements that have a specific attribute or value.</p>
+                    
+                    <h2 id="topic-2">What are the common selectors?</h2>
+                    <p>Common selectors are the most often used because they are the simplest to understand and apply.</p>
+                    <ul>
+                        <li><span class="color">Type selector</span> targets an element by it's tag name.</li>
+                        <li><span class="color">Class selector</span> assigns a class attribute to the element and is denoted by ".class-name". Classes are useful when you want to apply the same style to multiple HTML elements and when you want to apply more than one set of styles to an element.</li>
+                        <li><span class="color">ID selector</span>assigns an ID attribute to the element and is denoted by "#ID-name". IDs are best used for elements that have very unique styles that are specific to that one HTML element because you can only define one Id for each element and cannot reuse that ID's name.</li>
+                    </ul>
+                    <table>
+                        <tr>
+                            <th>Common Selector</th>
+                            <th>HTML</th>
+                            <th>CSS</th>
+                        </tr>
+                        <tr>
+                            <td>Type</td>
+                            <td class="coding">
+                                &lt;h1&gt;
+                            </td>
+                            <td class="coding left"><span class="type">h1</span> {<br>
+                                <span class="shift1">font-size: 5rem;</span><br>}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Class</td>
+                            <td class="coding">&lt;p <span class="attr">class</span>=<span class="value">"color"</span>&gt;</td>
+                            <td class="coding left"><span class="class">.color</span> {<br>
+                                <span class="shift1">color: 'cyan';</span><br>}
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>ID</td>
+                            <td class="coding">&lt;p <span class="attr">id</span>=<span class="value">"first-line"</span>&gt;</td>
+                            <td class="coding left"><span class="id">#first-line</span> {<br>
+                                <span class="shift1">font-weight: bold;</span><br>}
+                            </td>
+                        </tr>
+                    </table>
+                        <h2 id="topic-3">What are child selectors?</h2>
+                        <p>This selector type targets elements based on their relationship to other elements, specifically the parent-child relationship.</p>
                         <ul>
                             <li><span class="color">Descendant selector</span> not only does it select the child of the parent element, it selects all descendants of that parent element.</li>
                             <li><span class="color">Direct child selector</span> only targets direct child elements of the parent element.</li>
@@ -113,9 +125,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </details>
-                    <details>
-                        <summary>What are sibling selectors?</summary>
+                        <h2 id="topic-4">What are sibling selectors?</h2>
                         <p>This is the other selector that targets elements based on relationships. Sibling selectors select elements that have the same parent element.</p>
                         <ul>
                             <li><span class="color">General sibling selector</span> will select all of the same sibling that come after the specified element. Using the family metaphor, it select all younger siblings that are identical twins.</li>
@@ -156,9 +166,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </details>
-                    <details>
-                        <summary>What are attribute selectors?</summary>
+                        <h2 id="topic-5">What are attribute selectors?</h2>
                         <p>These selectors use the HTML element's attributes and their values to apply CSS styling. All attribute selectors are encased in square brackets.</p>
                         <ul>
                             <li><span class="color">Attribute present selector</span> selects the HTML elements that have the specified attribute even if there is no value.</li>
@@ -290,9 +298,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </details>
-                    <details>
-                        <summary>What are pseudo-clases?</summary>
+                        <h2 id="topic-6">What are pseudo-clases?</h2>
                         <p>Similar to classes, except pseudo-classes select HTML elements based on their structure or position within the DOM tree. Styles are 
                             applied to these elements depending on how the user interacts with the element, link states, etc. They are preceeded by a colon.</p>
                         <ul>
@@ -422,9 +428,7 @@
                                 </td>
                             </tr>
                         </table>
-                    </details>
-                    <details>
-                        <summary>What are pseudo-elements?</summary>
+                        <h2 id="topic-7">What are pseudo-elements?</h2>
                         <p>They are dynamic elements that are created when specified in the CSS code. Only one pseudo-element can be used within a selector at a time.</p>
                         <ul>
                             <li><span class="color">Textual pseudo-elements</span>target specific textual content. <i>:first-letter</i> selects the first letter of text inside the HTML element. <i>:first-line</i> identifies and selects the first line of text inside the element.</li>
@@ -477,10 +481,15 @@
                                 </td>
                             </tr>
                         </table>
-                    </details>
+                        <div id="top-button">
+                            <a href="#top">
+                                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                                </svg>Return to top
+                            </a>
+                        </div>
                 </section>
             </article>
-            <button type="button" class="return" onclick="window.location.href='CSS_list.html';">Return to CSS Lessons</button>
         </main>
         <footer>Copyright &#169 2023</footer>
     </body>
