@@ -140,7 +140,7 @@ aside div {
     position: fixed;
     align-items: center;
     width: 52vmin;
-    max-height: 70vh;
+    max-height: 65vh;
     overflow-y: auto;
     margin-top: 1rem;
 
@@ -265,6 +265,21 @@ li {
     margin-bottom: 1vmax;
 }
 
+span {
+    width: -moz-fit-content;
+    width: fit-content;
+}
+
+a {
+    color: cadetblue;
+    font-style: italic;
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(118, 198, 201);
+}
+
 #top-button {
     display: flex;
     justify-content: center;
@@ -318,13 +333,6 @@ strong {
     font-style: italic;
 }
 
-.red, .green, .blue, .black {
-    padding: 1px;
-    margin: 0 0.2rem;
-    background-color: rgba(255, 255, 255, 0.500);
-    box-shadow: -2px 2px 10px rgba(255, 255, 255, 0.500), -2px -2px 10px rgba(255, 255, 255, 0.500), 2px 2px 10px rgba(255, 255, 255, 0.500), 2px -2px 10px rgba(255, 255, 255, 0.500);
-}
-
 .red {
     color: red;
 }
@@ -347,10 +355,14 @@ strong {
 /*------------------------------------------------------------------------------------------------*/
 /* Code Styling */
 
+.coding {
+    font-family: 'Sometype Mono';
+    font-size: 2.5vmin;
+}
+
 .code-box {
     margin-left: 10vmin;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 75%;
     padding: 0.5rem 1.5rem;
     background-color: white;
     box-shadow:inset -3px -2px 4px darkcyan;
@@ -367,11 +379,6 @@ strong {
 
 .shift3 {
     padding-left: 3rem;
-}
-
-.coding {
-    font-family: 'Sometype Mono';
-    font-size: 2.5vmin;
 }
 
 .unique {
@@ -486,10 +493,10 @@ caption {
 }
 
 .default:nth-child(odd) td {
-    background-color:rgb(129, 248, 248);
+    background-color:rgb(0, 230, 230);
 }
 
-.too-big {
+.too-big, .too-big [scope="row"] {
     font-size: 0.35rem;
 }
 

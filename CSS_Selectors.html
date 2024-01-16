@@ -50,9 +50,9 @@
                     <h2 id="topic-2">What are the common selectors?</h2>
                     <p>Common selectors are the most often used because they are the simplest to understand and apply.</p>
                     <ul>
-                        <li><span class="color">Type selector</span> targets an element by it's tag name.</li>
-                        <li><span class="color">Class selector</span> assigns a class attribute to the element and is denoted by ".class-name". Classes are useful when you want to apply the same style to multiple HTML elements and when you want to apply more than one set of styles to an element.</li>
-                        <li><span class="color">ID selector</span>assigns an ID attribute to the element and is denoted by "#ID-name". IDs are best used for elements that have very unique styles that are specific to that one HTML element because you can only define one Id for each element and cannot reuse that ID's name.</li>
+                        <li><strong class="color">Type selector</strong> targets an element by it's tag name.</li>
+                        <li><strong class="color">Class selector</strong> assigns a class attribute to the element and is denoted by "<span class="coding">.class-name</span>". Classes are useful when you want to apply the same style to multiple HTML elements and when you want to apply more than one set of styles to an element.</li>
+                        <li><strong class="color">ID selector</strong> assigns an ID attribute to the element and is denoted by "<span class="coding">#ID-name</span>". IDs are best used for elements that have very unique styles that are specific to that one HTML element because you can only define one Id for each element and cannot reuse that ID's name.</li>
                     </ul>
                     <table>
                         <tr>
@@ -87,8 +87,8 @@
                         <h2 id="topic-3">What are child selectors?</h2>
                         <p>This selector type targets elements based on their relationship to other elements, specifically the parent-child relationship.</p>
                         <ul>
-                            <li><span class="color">Descendant selector</span> not only does it select the child of the parent element, it selects all descendants of that parent element.</li>
-                            <li><span class="color">Direct child selector</span> only targets direct child elements of the parent element.</li>
+                            <li><strong class="color">Descendant selector</strong> not only does it select the child of the parent element, it selects all descendants of that parent element.</li>
+                            <li><strong class="color">Direct child selector</strong> only targets direct child elements of the parent element.</li>
                         </ul>
                         <table>
                             <tr>
@@ -128,8 +128,8 @@
                         <h2 id="topic-4">What are sibling selectors?</h2>
                         <p>This is the other selector that targets elements based on relationships. Sibling selectors select elements that have the same parent element.</p>
                         <ul>
-                            <li><span class="color">General sibling selector</span> will select all of the same sibling that come after the specified element. Using the family metaphor, it select all younger siblings that are identical twins.</li>
-                            <li><span class="color">Adjacent sibling selector</span> is more specific and only selects the next closest sibling, regardless if it has a twin.</li>
+                            <li><strong class="color">General sibling selector</strong> will select all of the same sibling that come after the specified element. Using the family metaphor, it select all younger siblings that are identical twins.</li>
+                            <li><strong class="color">Adjacent sibling selector</strong> is more specific and only selects the next closest sibling, regardless if it has a twin.</li>
                         </ul>
                         <table>
                             <tr>
@@ -169,13 +169,13 @@
                         <h2 id="topic-5">What are attribute selectors?</h2>
                         <p>These selectors use the HTML element's attributes and their values to apply CSS styling. All attribute selectors are encased in square brackets.</p>
                         <ul>
-                            <li><span class="color">Attribute present selector</span> selects the HTML elements that have the specified attribute even if there is no value.</li>
-                            <li><span class="color">Attribute equals selector</span> selects the HTML elements that have the specified value for the attribute.</li>
-                            <li><span class="color">Attribute contains selector</span> selects the HTML elements that contains a specified string in the attribute's value.</li>
-                            <li><span class="color">Attribute begins with selector</span> selects the HTML elements that begins with a specified string in the attribute's value.</li>
-                            <li><span class="color">Attribute ends with selector</span> selects the HTML elements that ends with a specified string in the attribute's value.</li>
-                            <li><span class="color">Attribute spaced selector</span> selects the HTML elements that have a space in the attribute's value. Only one of the terms must match for the selection to work.</li>
-                            <li><span class="color">Attribute hyphenated selector</span> selects the HTML elements that have attributes with hyphenated values. The first half of the hyphenated value must be stated for the selection to work.</li>
+                            <li><strong class="color">Attribute present selector</strong> selects the HTML elements that have the specified attribute even if there is no value.</li>
+                            <li><strong class="color">Attribute equals selector</strong> selects the HTML elements that have the specified value for the attribute.</li>
+                            <li><strong class="color">Attribute contains selector</strong> selects the HTML elements that contains a specified string in the attribute's value.</li>
+                            <li><strong class="color">Attribute begins with selector</strong> selects the HTML elements that begins with a specified string in the attribute's value.</li>
+                            <li><strong class="color">Attribute ends with selector</strong> selects the HTML elements that ends with a specified string in the attribute's value.</li>
+                            <li><strong class="color">Attribute spaced selector</strong> selects the HTML elements that have a space in the attribute's value. Only one of the terms must match for the selection to work.</li>
+                            <li><strong class="color">Attribute hyphenated selector</strong> selects the HTML elements that have attributes with hyphenated values. The first half of the hyphenated value must be stated for the selection to work.</li>
                         </ul>
                         <table>
                             <tr>
@@ -302,13 +302,13 @@
                         <p>Similar to classes, except pseudo-classes select HTML elements based on their structure or position within the DOM tree. Styles are 
                             applied to these elements depending on how the user interacts with the element, link states, etc. They are preceeded by a colon.</p>
                         <ul>
-                            <li><span class="color">Link pseudo-classes</span> only has two regarding links: <i>:link</i> and <i>:visited</i>. These pseudo-classes change the link's style based on if it has been visited or not.</li>
-                            <li><span class="color">User action pseudo-classes</span> apply styles to elements based on how the user interacts with them. <i>:hover</i> is applied when the user hovers the mouse over the element. <i>:active</i> applies style to an element when the user clicks on it. <i>:focus</i> applies style to an element when it becomes the focus point of the page.</li>
-                            <li><span class="color">User interface state pseudo-classes</span> applies styles to the user interface state of elements, particularly form elements. <i>:enabled</i> targets an input when it's enabled (its default state). <i>:disabled</i> targets a disabled element. The <i>:checked</i> pseudo-class is used on checkboxes and radio buttons when they have been checked. The <i>:indeterminate</i> pseudo-class is used on the indeterminate state (neither checked nor unchecked) states of these elements.</li>
-                            <li><span class="color">Structural and position pseudo-classes</span> includes many options for targeting HTML elements because these pseudo-classes are based on the location of the elements within the DOM tree. These pseudo-classes can select the first, last, and the only child of the parent element.</li>
-                            <li>The <span class="color">Target pseudo-class</span> styles HTML elements when their ID matches the URI fragment identifier(#).</li>
-                            <li>The <span class="color">Empty pseudo-class</span> selects the HTML element that doesn't have any children or text nodes: the empty elements.</li>
-                            <li><span class="color">Negation pseudo-class</span> selects an element not represented by the stated value.</li>
+                            <li><strong class="color">Link pseudo-classes</strong> only has two regarding links: <span class="coding">:link</span> and <span class="coding">:visited</span>. These pseudo-classes change the link's style based on if it has been visited or not.</li>
+                            <li><strong class="color">User action pseudo-classes</strong> apply styles to elements based on how the user interacts with them. <span class="coding">:hover</span> is applied when the user hovers the mouse over the element. <span class="coding">:active</span> applies style to an element when the user clicks on it. <span class="coding">:focus</span> applies style to an element when it becomes the focus point of the page.</li>
+                            <li><strong class="color">User interface state pseudo-classes</strong> applies styles to the user interface state of elements, particularly form elements. <span class="coding">:enabled</span> targets an input when it's enabled (its default state). <span class="coding">:disabled</span> targets a disabled element. The <span class="coding">:checked</span> pseudo-class is used on checkboxes and radio buttons when they have been checked. The <span class="coding">:indeterminate</span> pseudo-class is used on the indeterminate state (neither checked nor unchecked) states of these elements.</li>
+                            <li><strong class="color">Structural and position pseudo-classes</strong> includes many options for targeting HTML elements because these pseudo-classes are based on the location of the elements within the DOM tree. These pseudo-classes can select the first, last, and the only child of the parent element.</li>
+                            <li>The <strong class="color">Target pseudo-class</strong> styles HTML elements when their ID matches the URI fragment identifier(#).</li>
+                            <li>The <strong class="color">Empty pseudo-class</strong> selects the HTML element that doesn't have any children or text nodes: the empty elements.</li>
+                            <li><strong class="color">Negation pseudo-class</strong> selects an element not represented by the stated value.</li>
                         </ul>
                         <table>
                             <tr>
@@ -431,9 +431,9 @@
                         <h2 id="topic-7">What are pseudo-elements?</h2>
                         <p>They are dynamic elements that are created when specified in the CSS code. Only one pseudo-element can be used within a selector at a time.</p>
                         <ul>
-                            <li><span class="color">Textual pseudo-elements</span>target specific textual content. <i>:first-letter</i> selects the first letter of text inside the HTML element. <i>:first-line</i> identifies and selects the first line of text inside the element.</li>
-                            <li><span class="color">Generated pseudo-elements</span> allow the developer to add more content or user interface components to the page without overcrowding the document with unsemantic elements. Both <i>:before</i> and <i>:after</i> create inline level pseudo-elements inside the selected element. These are commonly used with the content property to add nonimportant information. The :before pseudo-element is placed before the selected element while the :after pseud-element is placed after it.</li>
-                            <li>The <span class="color">Fragment pseudo-element</span> is <i>::selection</i>, which selects the part of the HTML document that has been selected or highlighted by the user. Not all browswers support this pseudo-element, so the <i>::-moz-selection</i> was created to work with Firefox. Keep in mind this pseudo-element can only be styled with the <strong>color</strong>, <strong>background</strong>, <strong>background-color</strong>, and <strong>text-shadow</strong> CSS properties.</li>
+                            <li><strong class="color">Textual pseudo-elements</strong> target specific textual content. <span class="coding">:first-letter</span> selects the first letter of text inside the HTML element. <span class="coding">:first-line</span> identifies and selects the first line of text inside the element.</li>
+                            <li><strong class="color">Generated pseudo-elements</strong> allow the developer to add more content or user interface components to the page without overcrowding the document with unsemantic elements. Both <span class="coding">:before</span> and <span class="coding">:after</span> create inline level pseudo-elements inside the selected element. These are commonly used with the content property to add nonimportant information. The :before pseudo-element is placed before the selected element while the :after pseud-element is placed after it.</li>
+                            <li>The <strong class="color">Fragment pseudo-element</strong> is <span class="coding">::selection</span>, which selects the part of the HTML document that has been selected or highlighted by the user. Not all browswers support this pseudo-element, so the <span class="coding">::-moz-selection</span> was created to work with Firefox. Keep in mind this pseudo-element can only be styled with the <span class="coding">color</span>, <span class="coding">background</span>, <span class="coding">background-color</span>, and <span class="coding">text-shadow</span> CSS properties.</li>
                         </ul>
                         <table>
                             <tr>
@@ -459,13 +459,13 @@
                                 <td class="coding left">
                                     &lt;div&gt;<span class="unique">some content</span>&lt;/div&gt;<br><br>
                                     &lt;div&gt;Some content&lt;/div&gt;<br><br>
-                                    &lt;div&gt;<span class="white">Some content</span>&lt;/div&gt;
+                                    &lt;div&gt;<span class="blue">Some content</span>&lt;/div&gt;
                                 </td>
                                 <td class="coding left">
                                     <span class="type">div::before</span> {<br>
                                     <span class="shift1">color: darkseagreen;</span><br>}<br><br>
                                     <span class="type">div::after</span> {<br>
-                                    <span class="shift1">color: white;</span><br>}
+                                    <span class="shift1">color: blue;</span><br>}
                                 </td>
                             </tr>
                             <tr>

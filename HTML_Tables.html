@@ -9,122 +9,121 @@
 </head>
 <body>
     <main>
-        <nav>
+        <nav id="top">
             <div class="logo-container">
                 <a class="logo" href="index.html">P</a>
                 <span class="title-name"></span>
             </div>
+            <div>
             <h1>HTML Tables</h1>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="HTML_list.html">HTML</a></li>
+                <li><a href="CSS_list.html">CSS</a></li>
+                <li><a href="index.html">JS</a></li>
+            </ul>
+            </div>
         </nav>
         <article>
-            <details>
-                <summary>What are the advantages of using HTML table tags?</summary>
-                    <p>HTML table tags are used to properly display and organize tabular data that is 
-                        best explained visually.</p>
-                    <p>These tags also make tabular data accessible to visually impaired users. Screen 
-                        readers recognize tabular data when encapsulated in HTML table tags and will 
-                        express such information appropriately to their visually impaired users.</p>
-            </details>
-            <details>
-                <summary>What are the disadvantages?</summary>
-                    <p>HTML table tags can quickly clutter the code making it difficult to read.</p>
-                    <p>They are meant only for tabular data and cannot be used for other types of data.</p>
-            </details>
-            <details>
-                <summary>What are the HTML table tags?</summary>
+            <aside>
+                <div>
                     <ul>
-                        <li><b>&lt;table&gt;</b> : presents tabular data in a 2D table of rows and columns</li>
-                        <li><b>&lt;thead&gt;</b> : surrounds of group of column headers</li>
-                        <li><b>&lt;tbody&gt;</b> : surrounds a set of table rows that present the table's body</li>
-                        <li><b>&lt;tfoot&gt;</b> : surounds the row that summarizes the tabular data, usually the 
-                            total or another calculation. Will automatically display this row as the last row in 
-                            the table</li>
-                        <li><b>&lt;tr&gt;</b> : defines a table row by surrounding a group of table cells</li>
-                        <li><b>&lt;th&gt;</b> : header cells, can be used for either column or row and usually 
-                            accompanied by the appropriate attribute</li>
-                        <li><b>&lt;td&gt;</b> : table cells, usually only for the table's body</li>
-                        <li><b>&lt;colgroup&gt;</b> : surrounds all &lt;col&gt; tags to set a particular style to 
-                            the specified column. This appears within the &lt;table&gt; tag at the top before the actual
-                            rows and columns</li>
-                        <li><b>&lt;col&gt;</b> : encapsulates the style for it's associated column</li>
-                        <li><b>&lt;caption&gt;</b> : nestled at the top and within the &lt;table&gt; tag and summarizes 
-                            the type of information displayed in the table</li>
+                        <li><a href="#topic-1">Advantages</a></li>
+                        <li><a href="#topic-2">Disadvantages</a></li>
+                        <li><a href="#topic-3">HTML Table Tags</a></li>
+                        <li><a href="#topic-4">Table Attributes</a></li>
+                        <li><a href="#topic-5">Table Structure</a></li>
+                        <li><a href="#topic-6">Nesting Tables</a></li>
+                        <li><a href="#topic-7">Associating Table Headers</a></li>
+                        <li><a href="#topic-8">Examples</a></li>
                     </ul>
-            </details>
-            <details>
-                <summary>What are some useful attributes for these tags?</summary>
+                    <button type="button" onclick="window.location.href='HTML_list.html';">Return to HTML Topics</button>
+                </div>
+            </aside>
+            <section>
+                <h2 id="topic-1">What are the advantages of using HTML table tags?</h2>
+                <p>HTML table tags are used to properly display and organize tabular data that is best explained visually.</p>
+                <p>These tags also make tabular data accessible to visually impaired users. Screen readers recognize tabular data when encapsulated in HTML table tags and will express such information appropriately to their visually impaired users.</p>
+                <h2 id="topic-2">What are the disadvantages?</h2>
+                <p>HTML table tags can quickly clutter the code making it difficult to read.</p>
+                <p>They are meant only for tabular data and cannot be used for other types of data.</p>
+                <h2 id="topic-3">What are the HTML table tags?</h2>
                 <ul>
-                    <li><i>colspan="#"</i> : spans across the specified column, unitless, used with &lt;th&gt;</li>
-                    <li><i>rowspan="#"</i> : spans across the specified row, unitless, used with &lt;th&gt;</li>
-                    <li><i>span="#"</i> : spans the styling across the specified number of columns when used with 
-                        &lt;col&gt;</li>
-                    <li><i>scope="col|row"</i> : informs screen readers whether the cells are associated with the row or column headers, used with &lt;th&gt;</li>
-                    <li><i>class="_"</i> : targets the element for CSS or JavaScript</li>
-                    <li><i>id= "_"</i> : targets the element for CSS or JavaScript and for association with other cells when applied to &lt;th&gt;</li>
-                    <li><i>headers="_"</i> : assoicates the cell with certain headers, used with &lt;td&gt;</li>
+                    <li><span class="coding highlight">&lt;table&gt;</span> : presents tabular data in a 2D table of rows and columns</li>
+                    <li><span class="coding highlight">&lt;thead&gt;</span> : surrounds of group of column headers</li>
+                    <li><span class="coding highlight">&lt;tbody&gt;</span> : surrounds a set of table rows that present the table's body</li>
+                    <li><span class="coding highlight">&lt;tfoot&gt;</span> : surounds the row that summarizes the tabular data, usually the total or another calculation. Will automatically display this row as the last row in the table</li>
+                    <li><span class="coding highlight">&lt;tr&gt;</span> : defines a table row by surrounding a group of table cells</li>
+                    <li><span class="coding highlight">&lt;th&gt;</span> : header cells, can be used for either column or row and usually accompanied by the appropriate attribute</li>
+                    <li><span class="coding highlight">&lt;td&gt;</span> : table cells, usually only for the table's body</li>
+                    <li><span class="coding highlight">&lt;colgroup&gt;</span> : surrounds all <span class="coding">&lt;col&gt;</span> tags to set a particular style to the specified column. This appears within the <span class="coding highlight">&lt;table&gt;</span> tag at the top before the actual rows and columns</li>
+                    <li><span class="coding highlight">&lt;col&gt;</span> : encapsulates the style for it's associated column</li>
+                    <li><span class="coding highlight">&lt;caption&gt;</span> : nestled at the top and within the <span class="coding">&lt;table&gt;</span> tag and summarizes the type of information displayed in the table</li>
                 </ul>
-            </details>
-            <details>
-                <summary>How do you structure a table using HTML tags?</summary>
-                    <div class="code-box">
-                        <div class="shift0">&lt;table&gt;</div>
-                            <div class="shift1">&lt;caption&gt;</div>
-                            <div class="shift1">&lt;colgroup&gt;</div>
-                                <div class="shift2">&lt;col /&gt;</div>
-                                <div class="shift2">.</div>
-                                <div class="shift2">.</div>
-                                <div class="shift2">.</div>
-                            <div class="shift1">&lt;/colgroup&gt;</div><br>
-                            <div class="shift1">&lt;thead&gt;</div>
-                                <div class="shift2">&lt;tr&gt;</div>
-                                    <div class="shift3">&lt;th&gt;&lt;/th&gt;</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                <div class="shift2">&lt;/tr&gt;</div>
-                                <div class="shift2">.</div>
-                                <div class="shift2">.</div>
-                                <div class="shift2">.</div>
-                            <div class="shift1">&lt;/thead&gt;</div><br>
-                            <div class="shift1">&lt;tbody&gt;</div>
-                                <div class="shift2">&lt;tr&gt;</div>
-                                    <div class="shift3">&lt;th&gt;&lt;/th&gt;</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">&lt;td&gt;&lt;/td&gt;</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                <div class="shift2">&lt;/tr&gt;</div>
-                                <div class="shift2">.</div>
-                                <div class="shift2">.</div>
-                                <div class="shift2">.</div>
-                            <div class="shift1">&lt;/tbody&gt;</div><br>
-                            <div class="shift1">&lt;tfoot&gt;</div>
-                                <div class="shift2">&lt;tr&gt;</div>
-                                    <div class="shift3">&lt;th&gt;&lt;/th&gt;</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">&lt;td&gt;&lt;/td&gt;</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                    <div class="shift3">.</div>
-                                <div class="shift2">&lt;/tr&gt;</div>
-                            <div class="shift1">&lt;/tfoot&gt;</div>
-                        <div class="shift0">&lt;/table&gt;</div>
-                    </div>
-                    <p>You see why it gets confusing after awhile to the point you don't want to 
-                        use table tags too often if it can be helped.</p>
-            </details>
-            <details>
-                <summary>What are nesting tables?</summary>
-                <p>Tables within tables. Generally they are not advisable because they are not 
-                    as easily read as a table that just had more cells for all that data.</p>
-                <p>The only time you would want to use nesting tables is if you needed to import 
-                    a table from another source.
-                </p>
+                <h2 id="topic-4">What are some useful attributes for these tags?</h2>
+                <ul>
+                    <li><span class="coding highlight">colspan="#"</span> : spans across the specified column, unitless, used with <span class="coding">&lt;th&gt;</span></li>
+                    <li><span class="coding highlight">rowspan="#"</span> : spans across the specified row, unitless, used with <span class="coding">&lt;th&gt;</span></li>
+                    <li><span class="coding highlight">span="#"</span> : spans the styling across the specified number of columns when used with <span class="coding">&lt;col&gt;</span></li>
+                    <li><span class="coding highlight">scope="col | row"</span> : informs screen readers whether the cells are associated with the row or column headers, used with <span class="coding">&lt;th&gt;</span></li>
+                    <li><span class="coding highlight">class="_"</span> : targets the element for CSS or JavaScript</li>
+                    <li><span class="coding highlight">id= "_"</span> : targets the element for CSS or JavaScript and for association with other cells when applied to <span class="coding">&lt;th&gt;</span></li>
+                    <li><span class="coding highlight">headers="_"</span> : assoicates the cell with certain headers, used with <span class="coding">&lt;td&gt;</span></li>
+                </ul>
+                <h2 id="topic-5">How do you structure a table using HTML tags?</h2>
+                <div class="coding code-box">
+                    <div class="shift0">&lt;<span class="type">table</span>&gt;</div>
+                        <div class="shift1">&lt;<span class="type">caption</span>&gt;</div>
+                        <div class="shift1">&lt;<span class="type">colgroup</span>&gt;</div>
+                            <div class="shift2">&lt;<span class="type">col</span> /&gt;</div>
+                            <div class="shift2">.</div>
+                            <div class="shift2">.</div>
+                            <div class="shift2">.</div>
+                        <div class="shift1">&lt;/<span class="type">colgroup</span>&gt;</div>
+                        <div class="shift1">&lt;<span class="type">thead</span>&gt;</div>
+                            <div class="shift2">&lt;<span class="type">tr</span>&gt;</div>
+                                <div class="shift3">&lt;<span class="type">th</span>&gt;&lt;/<span class="type">th</span>&gt;</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                            <div class="shift2">&lt;/<span class="type">tr</span>&gt;</div>
+                            <div class="shift2">.</div>
+                            <div class="shift2">.</div>
+                            <div class="shift2">.</div>
+                        <div class="shift1">&lt;/<span class="type">thead</span>&gt;</div>
+                        <div class="shift1">&lt;<span class="type">tbody</span>&gt;</div>
+                            <div class="shift2">&lt;<span class="type">tr</span>&gt;</div>
+                                <div class="shift3">&lt;<span class="type">th</span>&gt;&lt;/<span class="type">th</span>&gt;</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">&lt;<span class="type">td</span>&gt;&lt;/<span class="type">td</span>&gt;</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                            <div class="shift2">&lt;/<span class="type">tr</span>&gt;</div>
+                            <div class="shift2">.</div>
+                            <div class="shift2">.</div>
+                            <div class="shift2">.</div>
+                        <div class="shift1">&lt;/<span class="type">tbody</span>&gt;</div>
+                        <div class="shift1">&lt;<span class="type">tfoot</span>&gt;</div>
+                            <div class="shift2">&lt;<span class="type">tr</span>&gt;</div>
+                                <div class="shift3">&lt;<span class="type">th</span>&gt;&lt;/<span class="type">th</span>&gt;</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">&lt;<span class="type">td</span>&gt;&lt;/<span class="type">td</span>&gt;</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                                <div class="shift3">.</div>
+                            <div class="shift2">&lt;/<span class="type">tr</span>&gt;</div>
+                        <div class="shift1">&lt;/<span class="type">tfoot</span>&gt;</div>
+                    <div class="shift0">&lt;/<span class="type">table</span>&gt;</div>
+                </div>
+                <p>You see why it gets confusing after awhile to the point you don't want to use table tags too often if it can be helped.</p>
+                <h2 id="topic-6">What are nesting tables?</h2>
+                <p>Tables within tables. Generally they are not advisable because they are not as easily read as a table that just had more cells for all that data.</p>
+                <p>The only time you would want to use nesting tables is if you needed to import a table from another source.</p>
                 <p>This is what a nested table looks like:</p>
                 <table id="table1">
                     <tr class="default">
@@ -151,27 +150,16 @@
                         <td>cell6</td>
                     </tr>
                 </table>
-            </details>
-            <details>
-                <summary>Why should we associate cells with headers? How do we associate them?</summary>
-                <p>Not only is it a good for organizing your HTML document, associating cells and headers 
-                    allows visually impaired users to understand the tabular data and how different pieces 
-                    of information relate to each other.
-                </p>
+                <h2 id="topic-7">Why and how should we associate cells with headers?</h2>
+                <p>Not only is it a good for organizing your HTML document, associating cells and headers allows visually impaired users to understand the tabular data and how different pieces of information relate to each other.</p>
                 <p>There are two ways to do this and both use different attributes.</p>
-                <p><b>Method 1:</b><i>"Scope" Attribute</i></p>
-                <p>Probably the easier of the two, simply include the <em>scope</em> attribute to all header 
-                    cells (&lt;th&gt;) and specify whether it's a column header (scope="col") or row header 
-                    (scope="row").</p>
-                <p><b>Method 2:</b><i>"id" & "headers" Combination</i></p>
-                <p>A bit more complicated, but this method allows you to associate body cells (&lt;td&gt;) to specific 
-                    rows and columns by giving each header cell a unique id and each body cell the appropriate header, 
-                    which should basically be the same as the related header's id.</p>
-            </details>
-            <details>
-                <summary>Can I see some examples of tables and how these tags are used?</summary>
+                <p><strong>Method 1:</strong> <span class="color">"Scope" Attribute</span></p>
+                <p>Probably the easier of the two, simply include the <em>scope</em> attribute to all header cells (<span class="coding">&lt;th&gt;</span>) and specify whether it's a column header (<span class="coding">scope="col"</span>) or row header (<span class="coding">scope="row"</span>).</p>
+                <p><strong>Method 2:</strong> <span class="color">"id" & "headers" Combination</span></p>
+                <p>A bit more complicated, but this method allows you to associate body cells (<span class="coding">&lt;td&gt;</span>) to specific rows and columns by giving each header cell a unique id and each body cell the appropriate header, which should basically be the same as the related header's id.</p>
+                <h2 id="topic-8">Some examples of tables and tag usage</h2>
                 <p><strong>Example 1:</strong></p>
-                <p>This table only uses <strong>&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</strong></p>
+                <p>This table only uses <span class="coding">&lt;table&gt;, &lt;tr&gt;, &lt;td&gt;</span></p>
                 <table>    
                     <tr class="default">
                         <td>First cell</td>
@@ -187,7 +175,7 @@
                     </tr>
                 </table>
                 <p><strong>Example 2:</strong></p>
-                <p>This table uses <strong>&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</strong> and attributes <em>colspan, rowspan</em></p>
+                <p>This table uses elements <span class="coding">&lt;table&gt;, &lt;tr&gt;, &lt;th&gt;, &lt;td&gt;</span> and attributes <span class="coding">colspan, rowspan</span></p>
                 <table>
                     <tr class="default">
                         <th>&nbsp;</th>
@@ -226,173 +214,177 @@
                     </tr>
                 </table>
                 <p><strong>Example 3:</strong></p>
-                <table class="too-big">
-                    <caption>Table 1. Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
-                    <colgroup>
-                        <col />
-                        <col />
-                        <col style="border: 2px solid black;" />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                        <col />
-                    </colgroup>
-                    <thead>
-                        <tr>
-                            <th scope="col" colspan="2">&nbsp;</th>
-                            <th scope="col">Name</th>
-                            <th scope="col">Mass (10<sup>24</sup>kg)</th>
-                            <th scope="col">Diameter (km)</th>
-                            <th scope="col">Density (kg/m<sup>3</sup>)</th>
-                            <th scope="col">Gravity (m/s<sup>2</sup>)</th>
-                            <th scope="col">Length of day (hours)</th>
-                            <th scope="col">Distance from the Sun (10<sup>6</sup>>km)</th>
-                            <th scope="col">Mean temperature (C)</th>
-                            <th scope="col">Number of moons</th>
-                            <th scope="col">Notes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <th colspan="2" scope="row" rowspan="5">Terrestrial planets</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Mercury</th>
-                            <td class="too-big">0.330</td>
-                            <td class="too-big">4,879</td>
-                            <td class="too-big">5427</td>
-                            <td class="too-big">3.7</td>
-                            <td class="too-big">4222.6</td>
-                            <td class="too-big">57.9</td>
-                            <td class="too-big">167</td>
-                            <td class="too-big">0</td>
-                            <td class="too-big">Closest to the Sun</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Venus</th>
-                            <td class="too-big">4.87</td>
-                            <td class="too-big">12,104</td>
-                            <td class="too-big">5243</td>
-                            <td class="too-big">8.9</td>
-                            <td class="too-big">2802.0</td>
-                            <td class="too-big">108.2</td>
-                            <td class="too-big">464</td>
-                            <td class="too-big">0</td>
-                            <td class="too-big">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Earth</th>
-                            <td class="too-big">5.97</td>
-                            <td class="too-big">12,756</td>
-                            <td class="too-big">5514</td>
-                            <td class="too-big">9.8</td>
-                            <td class="too-big">24.0</td>
-                            <td class="too-big">149.6</td>
-                            <td class="too-big">15</td>
-                            <td class="too-big">1</td>
-                            <td class="too-big">Our world</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Mars</th>
-                            <td class="too-big">0.642</td>
-                            <td class="too-big">6,792</td>
-                            <td class="too-big">3933</td>
-                            <td class="too-big">3.7</td>
-                            <td class="too-big">24.7</td>
-                            <td class="too-big">227.9</td>
-                            <td class="too-big">-65</td>
-                            <td class="too-big">2</td>
-                            <td class="too-big">The red planet</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" rowspan="7">Jovian planets</th>
-                        </tr>
-                        <tr>
-                            <th scope="row" rowspan="3">Gas giants</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Jupiter</th>
-                            <td class="too-big">1898</td>
-                            <td class="too-big">142,984</td>
-                            <td class="too-big">1326</td>
-                            <td class="too-big">23.1</td>
-                            <td class="too-big">9.9</td>
-                            <td class="too-big">778.6</td>
-                            <td class="too-big">-110</td>
-                            <td class="too-big">67</td>
-                            <td class="too-big">The largest planet</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Saturn</th>
-                            <td class="too-big">568</td>
-                            <td class="too-big">120,536</td>
-                            <td class="too-big">687</td>
-                            <td class="too-big">9.0</td>
-                            <td class="too-big">10.7</td>
-                            <td class="too-big">1433.5</td>
-                            <td class="too-big">-140</td>
-                            <td class="too-big">62</td>
-                            <td class="too-big">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th rowspan="3">Ice Giants</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Uranus</th>
-                            <td class="too-big">86.8</td>
-                            <td class="too-big">51,118</td>
-                            <td class="too-big">1271</td>
-                            <td class="too-big">8.7</td>
-                            <td class="too-big">17.2</td>
-                            <td class="too-big">2872.5</td>
-                            <td class="too-big">-195</td>
-                            <td class="too-big">27</td>
-                            <td class="too-big">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th scope="row">Neptune</th>
-                            <td class="too-big">102</td>
-                            <td class="too-big">49,528</td>
-                            <td class="too-big">1638</td>
-                            <td class="too-big">11.0</td>
-                            <td class="too-big">16.1</td>
-                            <td class="too-big">4495.1</td>
-                            <td class="too-big">-200</td>
-                            <td class="too-big">14</td>
-                            <td class="too-big">&nbsp;</td>
-                        </tr>
-                        <tr>
-                            <th scope="row" colspan="2" rowspan="2">Dwarf planets*</th>
-                        </tr>
-                        <tr>
-                            <th scope="row">Pluto</th>
-                            <td class="too-big">0.0146</td>
-                            <td class="too-big">2,370</td>
-                            <td class="too-big">2095</td>
-                            <td class="too-big">0.7</td>
-                            <td class="too-big">153.3</td>
-                            <td class="too-big">5906.4</td>
-                            <td class="too-big">-225</td>
-                            <td class="too-big">5</td>
-                            <td class="too-big">Declassified as a planet in 2006, but this <a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
-                        </tr>
-                        
-                    </tbody>
-                </table>
-            </details>
-            <details>
-                <summary>What resources can teach me more?</summary>
+                    <table class="too-big">
+                        <caption>Table 1. Data about the planets of our solar system (Planetary facts taken from <a href="http://nssdc.gsfc.nasa.gov/planetary/factsheet/">Nasa's Planetary Fact Sheet - Metric</a>).</caption>
+                        <colgroup>
+                            <col />
+                            <col />
+                            <col style="border: 2px solid black;" />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                            <col />
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col" colspan="2">&nbsp;</th>
+                                <th scope="col">Name</th>
+                                <th scope="col">Mass (10<sup>24</sup>kg)</th>
+                                <th scope="col">Diameter (km)</th>
+                                <th scope="col">Density (kg/m<sup>3</sup>)</th>
+                                <th scope="col">Gravity (m/s<sup>2</sup>)</th>
+                                <th scope="col">Length of day (hours)</th>
+                                <th scope="col">Distance from the Sun (10<sup>6</sup>>km)</th>
+                                <th scope="col">Mean temperature (C)</th>
+                                <th scope="col">Number of moons</th>
+                                <th scope="col">Notes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th colspan="2" scope="row" rowspan="5">Terrestrial planets</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mercury</th>
+                                <td class="too-big">0.330</td>
+                                <td class="too-big">4,879</td>
+                                <td class="too-big">5427</td>
+                                <td class="too-big">3.7</td>
+                                <td class="too-big">4222.6</td>
+                                <td class="too-big">57.9</td>
+                                <td class="too-big">167</td>
+                                <td class="too-big">0</td>
+                                <td class="too-big">Closest to the Sun</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Venus</th>
+                                <td class="too-big">4.87</td>
+                                <td class="too-big">12,104</td>
+                                <td class="too-big">5243</td>
+                                <td class="too-big">8.9</td>
+                                <td class="too-big">2802.0</td>
+                                <td class="too-big">108.2</td>
+                                <td class="too-big">464</td>
+                                <td class="too-big">0</td>
+                                <td class="too-big">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Earth</th>
+                                <td class="too-big">5.97</td>
+                                <td class="too-big">12,756</td>
+                                <td class="too-big">5514</td>
+                                <td class="too-big">9.8</td>
+                                <td class="too-big">24.0</td>
+                                <td class="too-big">149.6</td>
+                                <td class="too-big">15</td>
+                                <td class="too-big">1</td>
+                                <td class="too-big">Our world</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Mars</th>
+                                <td class="too-big">0.642</td>
+                                <td class="too-big">6,792</td>
+                                <td class="too-big">3933</td>
+                                <td class="too-big">3.7</td>
+                                <td class="too-big">24.7</td>
+                                <td class="too-big">227.9</td>
+                                <td class="too-big">-65</td>
+                                <td class="too-big">2</td>
+                                <td class="too-big">The red planet</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="7">Jovian planets</th>
+                            </tr>
+                            <tr>
+                                <th scope="row" rowspan="3">Gas giants</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Jupiter</th>
+                                <td class="too-big">1898</td>
+                                <td class="too-big">142,984</td>
+                                <td class="too-big">1326</td>
+                                <td class="too-big">23.1</td>
+                                <td class="too-big">9.9</td>
+                                <td class="too-big">778.6</td>
+                                <td class="too-big">-110</td>
+                                <td class="too-big">67</td>
+                                <td class="too-big">The largest planet</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Saturn</th>
+                                <td class="too-big">568</td>
+                                <td class="too-big">120,536</td>
+                                <td class="too-big">687</td>
+                                <td class="too-big">9.0</td>
+                                <td class="too-big">10.7</td>
+                                <td class="too-big">1433.5</td>
+                                <td class="too-big">-140</td>
+                                <td class="too-big">62</td>
+                                <td class="too-big">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th rowspan="3">Ice Giants</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Uranus</th>
+                                <td class="too-big">86.8</td>
+                                <td class="too-big">51,118</td>
+                                <td class="too-big">1271</td>
+                                <td class="too-big">8.7</td>
+                                <td class="too-big">17.2</td>
+                                <td class="too-big">2872.5</td>
+                                <td class="too-big">-195</td>
+                                <td class="too-big">27</td>
+                                <td class="too-big">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Neptune</th>
+                                <td class="too-big">102</td>
+                                <td class="too-big">49,528</td>
+                                <td class="too-big">1638</td>
+                                <td class="too-big">11.0</td>
+                                <td class="too-big">16.1</td>
+                                <td class="too-big">4495.1</td>
+                                <td class="too-big">-200</td>
+                                <td class="too-big">14</td>
+                                <td class="too-big">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" colspan="2" rowspan="2">Dwarf planets*</th>
+                            </tr>
+                            <tr>
+                                <th scope="row">Pluto</th>
+                                <td class="too-big">0.0146</td>
+                                <td class="too-big">2,370</td>
+                                <td class="too-big">2095</td>
+                                <td class="too-big">0.7</td>
+                                <td class="too-big">153.3</td>
+                                <td class="too-big">5906.4</td>
+                                <td class="too-big">-225</td>
+                                <td class="too-big">5</td>
+                                <td class="too-big">Declassified as a planet in 2006, but this <a href="http://www.usatoday.com/story/tech/2014/10/02/pluto-planet-solar-system/16578959/">remains controversial</a>.</td>
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                <h2 id="topic-">Additional resources</h2>
                 <ul>
                     <li><a class="resource" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Basics">HTML Table Basics</a></li>
                     <li><a class="resource" href="https://developer.mozilla.org/en-US/docs/Web/HTML/Reference">HTML Reference</a></li>
                     <li><a class="resource" href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Tables/Advanced">Advanced Table Features</a></li>
                 </ul>
-            </details>
+                <div id="top-button">
+                    <a href="#top">
+                        <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                        </svg>Return to top
+                    </a>
+                </div>
+            </section>
         </article>
-        <button type="button" class="return" onclick="window.location.href='HTML_list.html';">Return to HTML Lessons</button>
     </main>    
     <footer>Copyright &#169 2023</footer>
 </body>

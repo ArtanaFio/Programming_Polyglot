@@ -72,56 +72,75 @@
                         <span class="coding">left</span> properties can be used to position the element within the viewport.</p>
                         <p>This web page's sidebar uses a fixed position and the code to set it up is displayed below:</p>
                         <div class="coding code-box">
-                            &lt;style&gt;
-                            <span class="shift1 type">aside, div</span> {
-                                <span class="shift2">width: 49vmin;</span>
-                            <span class="shift1">}</span>
-                            
-                            <span class="shift1 type">aside div</span> {
-                                <span class="shift2">position: fixed;</span>
-                                <span class="shift2">align-items: center;</span>
-                            <span class="shift1">}</span>
-                            
-                            aside div ul {
-                                margin: 0;
-                                margin-top: 5vmax;
-                                padding: 0 3vmin;
-                                list-style-type: none;
-                                line-height: 0;
-                            }
-                            
-                            aside div ul li {
-                                padding: 3vmin;
-                                text-align: center;
-                            }
-                            
-                            aside div ul li a {
-                                text-decoration: none;
-                                color: white;
-                                padding: 1vmin 3vmin;
-                            }
-                            
-                            aside div ul li a:hover {
-                                font-weight: bold;
-                                background-color: rgba(102, 248, 248, 0.603);
-                                border-radius: 10px;
-                                box-shadow: inset 1vmin 1vmin 2vmin teal, inset -1vmin -1vmin 2vmin teal, inset 1vmin -1vmin 2vmin teal, inset -1vmin 1vmin 2vmin teal;
-                                width: -moz-fit-content;
-                                width: fit-content;
-                            }<br>
-                            &lt;/style&gt;<br>
-                            &lt;aside&gt;
-                                <span class="shift1">&lt;div&gt;</span>
-                                    <span class="shift2">&lt;ul&gt;</span>
-                                        <span class="shift3">&lt;li&gt;&lt;a href="#static">Static Positioning&lt;/a&gt;&lt;/li&gt;</span>
-                                        <span class="shift3">&lt;li&gt;&lt;a href="#relative">Relative Positioning&lt;/a&gt;&lt;/li&gt;</span>
-                                        <span class="shift3">&lt;li&gt;&lt;a href="#fixed">Fixed Positioning&lt;/a&gt;&lt;/li&gt;</span>
-                                        <span class="shift3">&lt;li&gt;&lt;a href="#absolute">Absolute Positioning&lt;/a&gt;&lt;/li&gt;</span>
-                                        <span class="shift3">&lt;li&gt;&lt;a href="#sticky">Sticky Positioning&lt;/a&gt;&lt;/li&gt;</span>
-                                    <span class="shift2">&lt;/ul&gt;</span>
-                                    <span class="shift2">&lt;button type="button" class="return" onclick="window.location.href='CSS_list.html';"&gt;Return to CSS Lessons&lt;/button&gt;</span>
-                                <span class="shift1">&lt;/div&gt;</span>
-                            &lt;/aside&gt;
+                            <div>&lt;<span class="type">style</span>&gt;</div>
+                            <br><br>
+                            <div>
+                                <span class="shift1 type">aside, div</span> {<br>
+                                <span class="shift2">width: 49vmin;</span><br>
+                                <span class="shift1">}</span>
+                            </div>
+                            <br>
+                            <div>
+                                <span class="shift1 type">aside div</span> {<br>
+                                <span class="shift2">position: fixed;</span><br>
+                                <span class="shift2">align-items: center;</span><br>
+                                <span class="shift1">}</span>
+                            </div>
+                            <br>
+                            <div>
+                                <span class="shift1 type">aside div ul</span> {<br>
+                                <span class="shift2">margin: 0;</span><br>
+                                <span class="shift2">margin-top: 5vmax;</span><br>
+                                <span class="shift2">padding: 0 3vmin;</span><br>
+                                <span class="shift2">list-style-type: none;</span><br>
+                                <span class="shift2">line-height: 0;</span><br>
+                                <span class="shift1">}</span><br>
+                            </div>
+                            <br>
+                            <div>
+                                <span class="shift1 type">aside div ul li {</span><br>
+                                <span class="shift2">padding: 3vmin;</span><br>
+                                <span class="shift2">text-align: center;</span><br>
+                                <span class="shift1">}</span><br>
+                            </div>
+                            <br>
+                            <div>
+                                <span class="shift1 type">aside div ul li a</span> {<br>
+                                <span class="shift2">text-decoration: none;</span><br>
+                                <span class="shift2">color: white;</span><br>
+                                <span class="shift2">padding: 1vmin 3vmin;</span><br>
+                                <span class="shift1">}</span><br>
+                            </div>
+                            <br>
+                            <div>
+                                <span class="shift1 type">aside div ul li</span> <span class="class">a:hover</span> {<br>
+                                <span class="shift2">font-weight: bold;</span><br>
+                                <span class="shift2">background-color: rgba(102, 248, 248, 0.603);</span><br>
+                                <span class="shift2">border-radius: 10px;</span><br>
+                                <span class="shift2">box-shadow: inset 1vmin 1vmin 2vmin teal, <br>
+                                    <span class="shift2">inset -1vmin -1vmin 2vmin teal,</span><br>
+                                    <span class="shift2">inset 1vmin -1vmin 2vmin teal,</span><br>
+                                    <span class="shift2">inset -1vmin 1vmin 2vmin teal;</span><br>
+                                <span class="shift2">width: -moz-fit-content;</span><br>
+                                <span class="shift2">width: fit-content;</span><br>
+                                <span class="shift1">}</span><br>
+                            </div>
+                            <div>&lt;/<span class="type">style&gt;</span></div>
+                            <div>&lt;<span class="type">aside</span>&gt;</div>
+                                <div class="shift1">&lt;<span class="type">div</span>&gt;</div>
+                                    <div class="shift2">&lt;<span class="type">ul</span>&gt;</div>
+                                        <div class="shift3">&lt;<span class="type">li</span>&gt;&lt;<span class="type">a</span> <span class="attr">href</span>="<span class="value">#static</span>"&gt;Static Positioning&lt;/<span class="type">a</span>&gt;&lt;/<span class="type">li</span>&gt;</div>
+                                        <div class="shift3">&lt;<span class="type">li</span>&gt;&lt;<span class="type">a</span> <span class="attr">href</span>="<span class="value">#relative</span>"&gt;Relative Positioning&lt;/<span class="type">a</span>&gt;&lt;/<span class="type">li</span>&gt;</div>
+                                        <div class="shift3">&lt;<span class="type">li</span>&gt;&lt;<span class="type">a</span> <span class="attr">href</span>="<span class="value">#fixed</span>"&gt;Fixed Positioning&lt;/<span class="type">a</span>&gt;&lt;/<span class="type">li</span>&gt;</div>
+                                        <div class="shift3">&lt;<span class="type">li</span>&gt;&lt;<span class="type">a</span> <span class="attr">href</span>="<span class="value">#absolute</span>"&gt;Absolute Positioning&lt;/<span class="type">a</span>&gt;&lt;/<span class="type">li</span>&gt;</div>
+                                        <div class="shift3">&lt;<span class="type">li</span>&gt;&lt;<span class="type">a</span> <span class="attr">href</span>="<span class="value">#sticky</span>"&gt;Sticky Positioning&lt;/<span class="type">a</span>&gt;&lt;/<span class="type">li</span>&gt;</div>
+                                    <div class="shift2">&lt;/<span class="type">ul</span>&gt;</div>
+                                    <div class="shift2">&lt;<span class="type">button</span> <span class="attr">type</span>="<span class="value">button</span>" <span class="attr">class</span>="<span class="value">return</span>" <span class="attr">onclick</span>="<span class="value">window.location.href='CSS_list.html';</span>"&gt;<br>
+                                        <span class="shift3">Return to CSS Lessons</span><br>
+                                        &lt;/<span class="type">button</span>&gt;
+                                    </div>
+                                <div class="shift1">&lt;/<span class="type">div</span>&gt;</div>
+                            <div>&lt;/<span class="type">aside</span>&gt;</div>
                         </div>
                     <h2 id="topic-4">Absolute Positioning</h2>
                     <div class="coding code-box">

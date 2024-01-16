@@ -8,89 +8,108 @@
     </head>
     <body>
         <main>
-            <nav>
+            <nav id="top">
                 <div class="logo-container">
                     <a class="logo" href="index.html">P</a>
                     <span class="title-name"></span>
                 </div>
-                <h1>HTML Elements</h1>
+                <div>
+                    <h1>HTML Elements</h1>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="HTML_list.html">HTML</a></li>
+                        <li><a href="CSS_list.html">CSS</a></li>
+                        <li><a href="index.html">JS</a></li>
+                    </ul>
+                </div>
             </nav>
             <article>
-                <details>
-                    <summary>What is HTML?</summary>
-                        <p><strong><span class="color">H</span>yper<span class="color">T</span>ext <span class="color">M</span>arkup <span class="color">L</span>anguage</strong></p>
-                </details>
-                <details>
-                    <summary>What are HTML elements?</summary>
+                <aside>
+                    <div>
+                        <ul>
+                            <li><a href="#topic-1">HTML Elements</a></li>
+                            <li><a href="#topic-2">HTML Tags</a></li>
+                            <li><a href="#topic-3">Properties</a></li>
+                            <li><a href="#topic-4">Attributes</a></li>
+                            <li><a href="#topic-5">Values</a></li>
+                            <li><a href="#topic-6">Types of Elements</a></li>
+                        </ul>
+                        <button type="button" onclick="window.location.href='HTML_list.html';">Return to HTML Topics</button>
+                    </div>
+                </aside>
+                <section>
+                        <p>HTML stands for <strong><span class="color">H</span>yper<span class="color">T</span>ext <span class="color">M</span>arkup <span class="color">L</span>anguage</strong></p>
+                
+                
+                    <h2 id="topic-1">What are HTML elements?</h2>
                         <p>HTML elements are basically the building blocks of any web application that is meant to be viewable to users.
                             Elements are designated by tags, often including an attribute and its value.
                         </p>
-                </details>
-                <details>
-                    <summary>What are HTML tags?</summary>
+                    <h2 id="topic-2">What are HTML tags?</h2>
                         <p>The HTML "code" for a specfic HTML element. They look like this:</p>
-                        <div class="code-box">
-                            <div><b>&lt;element&gt;</b> content <b>&lt;/element&gt;</b></div>
+                        <div class="coding code-box">
+                            <span><span class="type">&lt;element&gt;</span> content <span class="type">&lt;/element&gt;</span></span>
                         </div>
                         <p>Examples:</p>
                         <ul>
-                            <li><b>&lt;p&gt; &lt;/p&gt;</b> = paragraph; used for textual information.</li>
-                            <li><b>&lt;body&gt; &lt;/body&gt;</b> = body; encapsulates the entire web page</li>
-                            <li><b>&lt;a&gt; &lt;/a&gt;</b> = link; defines a link to another web page</li>
-                            <li><b>&lt;ol&gt; &lt;/ol&gt;</b> = ordered list; encapsulates a numbered list of items</li>
-                            <li><b>&lt;h1&gt; &lt;/h1&gt;</b> = header, level 1; the highest (largest) heading, often used for titles</li>
+                            <li><span class="coding highlight">&lt;p&gt;</span> <span class="coding highlight">&lt;/p&gt;</span> = paragraph; used for textual information.</li>
+                            <li><span class="coding highlight">&lt;body&gt;</span> <span class="coding highlight">&lt;/body&gt;</span> = body; encapsulates the entire web page</li>
+                            <li><span class="coding highlight">&lt;a&gt;</span> <span class="coding highlight">&lt;/a&gt;</span> = link; defines a link to another web page</li>
+                            <li><span class="coding highlight">&lt;ol&gt;</span> <span class="coding highlight">&lt;/ol&gt;</span> = ordered list; encapsulates a numbered list of items</li>
+                            <li><span class="coding highlight">&lt;h1&gt;</span> <span class="coding highlight">&lt;/h1&gt;</span> = header, level 1; the highest (largest) heading, often used for titles</li>
                         </ul>
-                        <p>You'll notice that all of these tags have an opening tag (<b>&lt;element&gt;</b>) and a closing tag (<b>&lt;/element&gt;</b>).</p>
-                        <p>However, some tags only have an opening tag, such as:</p>
-                        <p><b>&lt;img&gt;</b> = image; used to designate pictures. For this specific tag to work, it needs it's <i>href</i> attribute to define the image file.</p>
-                </details>
-                <details>
-                    <summary>What are HTML properties?</summary>
-                        <p>Properties are defined by the Document Object Model (<abbr>DOM</abbr>).</p>
+                        <p>You'll notice that all of these tags have an opening tag (<span class="coding highlight">&lt;element&gt;</span>) and a closing tag (<span class="coding highlight">&lt;/element&gt;</span>).</p>
+                        <p>However, some tags only have an opening tag, such as: <span class="coding highlight">&lt;img&gt;</span>, which is used to designate images. For this specific tag to work, it needs the "<span class="coding">href</span>" attribute to define the image file.</p>
+                
+                    <h2 id="topic-3">What are HTML properties?</h2>
+                        <p>Properties are defined by the <strong>Document Object Model (<abbr>DOM</abbr>)</strong>.</p>
                         <p>Although most properties are strings, some can be objects.</p>
-                </details>
-                <details>
-                    <summary>What are attributes?</summary>
-                        <p>They customize the tag in different ways. The CSS selectors "class" and "id" are both attributes.</p>
-                        <div class="code-box">
-                            <span>&lt;tag <b>attribute</b>="value"&gt; content &lt;/&gt;</span>
+                
+                    <h2 id="topic-4">What are attributes?</h2>
+                        <p>They customize the tag in different ways. The CSS selectors "<span class="coding">class</span>" and "<span class="coding">id</span>" are both attributes.</p>
+                        <div class="coding code-box">
+                            <span>&lt;<span class="type">tag</span> <span class="attr">attribute</span>="<span class="value">value</span>"&gt;content&lt;/<span class="type">tag</span>&gt;</span>
                         </div>
                         <p>Example: Image</p>
-                        <div class="code-box">
-                            <span>&lt;img <b>href</b>="https://www.example.com"&gt; click this link &lt;/&gt;</span>
+                        <div class="coding code-box">
+                            <span>&lt;<span class="type">img</span> <span class="attr">href</span>="<span class="value">https://www.example.com</span>"&gt;click this link&lt;/<span class="type">img</span>&gt;</span>
                         </div>
                         <p>Attributes are can be both upper or lowercase; it doesn't actually matter.</p>
                         <p>Attribute values are always strings, not actual numbers.</p>
-                </details>
-                <details>
-                    <summary>What are values?</summary>
+                
+                    <h2 id="topic-5">What are values?</h2>
                         <p>Values refer to the type of attribute being used.</p>
-                </details>
-                <details>
-                    <summary>What are the different types of HTML elements?</summary>
+                
+                    <h2 id="topic-6">What are the different types of HTML elements?</h2>
                     <p>
                         <ul>
-                            <li><b>Main root:</b> <strong>&lt;html&gt;</strong> is thetop-level element and can only be used once. All other elements are descendants of the root element.</li>
-                            <li><b>Document metadata:</b> information about the webpage such as styles, scripts, and data to help the software display the webpage.</li>
-                            <li><b>Sectioning root:</b> <strong>&lt;body&gt;</strong> is the only one used to encapsulate the content of the HTML document.</li>
-                            <li><b>Content sectioning:</b> These elements logically organize the document's content in an outline format. Examples: header, main, article, section, section headings, etc.</li>
-                            <li><b>Text content:</b> These elements further organize content sectioning elements. Examples: block quotes, ordered and unordered lists, list items, paragraphs, etc.</li>
-                            <li><b>Inline text semantics:</b> These elements specify the structure and style of a piece of text. Examples: hyperlinks, abbreviations, line break, boldface text, emphasized text, etc.</li>
-                            <li><b>Image and Multimedia:</b> These elements support various multimedia resources. Examples: images, videos, audio, etc.</li>
-                            <li><b>Embedded content:</b> These elements support other types of embedded content. Examples: <strong>&lt;embed&gt;</strong>, <strong>&lt;object&gt;</strong>, <strong>&lt;portal&gt;</strong>, etc.</li>
-                            <li><b>SVG and MathML:</b> Used to embed SVG and MathML content</li>
-                            <li><b>Scripting:</b> Use to allow dynamic content by supporting scripting languages like JavaScript.</li>
-                            <li><b>Demarcating edits:</b> Lets users know some content has been specifically altered. Example: deletions and insertions</li>
-                            <li><b>Table content:</b> Best used to express tabular data; any type of information that is best conveyed in a more visual format than purely textual.</li>
-                            <li><b>Forms:</b> Used to create forms that the user can input and submit information to the website or application. Examples: buttons, text fields, selectable options, labels, etc.</li>
-                            <li><b>Interactive elements:</b> Allows other types of interactive content like disclosure widgets and dialog boxes.</li>
-                            <li><b>Web components:</b> Customizable elements to perform unique functions. Examples: <strong>&lt;slot&gt;</strong> and <strong>&lt;template&gt;</strong></li>
-                            <li><b>Obsolete and deprecated elements:</b> Older elements that are no longer compatible with the newest version of HTML.</li>
+                            <li><span class="color">Main root:</span> <span class="coding highlight">&lt;html&gt;</span> is thetop-level element and can only be used once. All other elements are descendants of the root element.</li>
+                            <li><span class="color">Document metadata:</span> information about the webpage such as styles, scripts, and data to help the software display the webpage.</li>
+                            <li><span class="color">Sectioning root:</span> <span class="coding highlight">&lt;body&gt;</span> is the only one used to encapsulate the content of the HTML document.</li>
+                            <li><span class="color">Content sectioning:</span> These elements logically organize the document's content in an outline format. Examples: header, main, article, section, section headings, etc.</li>
+                            <li><span class="color">Text content:</span> These elements further organize content sectioning elements. Examples: block quotes, ordered and unordered lists, list items, paragraphs, etc.</li>
+                            <li><span class="color">Inline text semantics:</span> These elements specify the structure and style of a piece of text. Examples: hyperlinks, abbreviations, line break, boldface text, emphasized text, etc.</li>
+                            <li><span class="color">Image and Multimedia:</span> These elements support various multimedia resources. Examples: images, videos, audio, etc.</li>
+                            <li><span class="color">Embedded content:</span> These elements support other types of embedded content. Examples: <span class="coding highlight">&lt;embed&gt;</span>, <span class="coding highlight">&lt;object&gt;</span>, <span class="coding highlight">&lt;portal&gt;</span>, etc.</li>
+                            <li><span class="color">SVG and MathML:</span> Used to embed SVG and MathML content</li>
+                            <li><span class="color">Scripting:</span> Use to allow dynamic content by supporting scripting languages like JavaScript.</li>
+                            <li><span class="color">Demarcating edits:</span> Lets users know some content has been specifically altered. Example: deletions and insertions</li>
+                            <li><span class="color">Table content:</span> Best used to express tabular data; any type of information that is best conveyed in a more visual format than purely textual.</li>
+                            <li><span class="color">Forms:</span> Used to create forms that the user can input and submit information to the website or application. Examples: buttons, text fields, selectable options, labels, etc.</li>
+                            <li><span class="color">Interactive elements:</span> Allows other types of interactive content like disclosure widgets and dialog boxes.</li>
+                            <li><span class="color">Web components:</span> Customizable elements to perform unique functions. Examples: <span class="coding highlight">&lt;slot&gt;</span> and <span class="coding highlight">&lt;template&gt;</span></li>
+                            <li><span class="color">Obsolete and deprecated elements:</span> Older elements that are no longer compatible with the newest version of HTML.</li>
                         </ul>
                     </p>
-                </details>
+                    <div id="top-button">
+                        <a href="#top">
+                            <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 14">
+                                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13V1m0 0L1 5m4-4 4 4"/>
+                            </svg>Return to top
+                        </a>
+                    </div>
+                </section>
             </article>
-            <button type="button" class="return" onclick="window.location.href='HTML_list.html';">Return to HTML Lessons</button>
         </main>
         <footer>Copyright &#169 2023</footer>
     </body>
