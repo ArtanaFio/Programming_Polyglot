@@ -275,7 +275,7 @@ section a {
     font-style: italic;
 }
 
-a:hover {
+section a:hover {
     text-decoration: none;
     color: rgb(118, 198, 201);
 }
